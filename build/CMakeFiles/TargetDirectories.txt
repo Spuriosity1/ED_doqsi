@@ -1,0 +1,7 @@
+/Users/alaricsanders/mygh/ED_DOQSI/build/CMakeFiles/tfim.dir
+/Users/alaricsanders/mygh/ED_DOQSI/build/CMakeFiles/tfim_no_sym.dir
+/Users/alaricsanders/mygh/ED_DOQSI/build/CMakeFiles/heischain.dir
+/Users/alaricsanders/mygh/ED_DOQSI/build/CMakeFiles/rationalmath.dir
+/Users/alaricsanders/mygh/ED_DOQSI/build/CMakeFiles/pyro16.dir
+/Users/alaricsanders/mygh/ED_DOQSI/build/CMakeFiles/edit_cache.dir
+/Users/alaricsanders/mygh/ED_DOQSI/build/CMakeFiles/rebuild_cache.dir

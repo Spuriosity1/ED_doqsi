@@ -1,0 +1,24 @@
+cmake_minimum_required(VERSION 3.19)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+project(
+  hello_world
+)
+
+find_package(xdiag REQUIRED HINTS "../../gh/xdiag/install")
+
+# the tests
+add_executable(tfim tests/tfim.cpp)
+target_link_libraries(tfim PRIVATE xdiag::xdiag)
+
+add_executable(tfim_no_sym tests/tfim_no_sym.cpp)
+target_link_libraries(tfim_no_sym PRIVATE xdiag::xdiag)
+
+add_executable(heischain tests/heischain.cpp)
+target_link_libraries(heischain PRIVATE xdiag::xdiag)
+
+add_executable(rationalmath tests/rationalmath.cpp)
+
+# main files
+add_executable(pyro16 pyro16.cpp)
+target_link_libraries(pyro16 PRIVATE xdiag::xdiag)
