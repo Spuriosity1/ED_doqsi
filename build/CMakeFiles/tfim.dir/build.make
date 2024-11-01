@@ -92,7 +92,7 @@ tfim_EXTERNAL_OBJECTS =
 
 tfim: CMakeFiles/tfim.dir/tests/tfim.cpp.o
 tfim: CMakeFiles/tfim.dir/build.make
-tfim: /Users/alaricsanders/gh/xdiag/install/lib/libxdiag.a
+tfim: /usr/local/lib/libxdiag.a
 tfim: /opt/homebrew/Cellar/gcc/14.2.0/lib/gcc/current/libgomp.dylib
 tfim: /opt/homebrew/lib/libhdf5_cpp.310.0.4.dylib
 tfim: /opt/homebrew/lib/libhdf5.310.4.0.dylib

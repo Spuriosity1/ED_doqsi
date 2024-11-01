@@ -4,7 +4,7 @@
 # compile CXX with /opt/homebrew/bin/g++-14
 CXX_DEFINES = -DH5_BUILT_AS_DYNAMIC_LIB -DXDIAG_USE_HDF5
 
-CXX_INCLUDES = -isystem /Users/alaricsanders/gh/xdiag/install/include -isystem /opt/homebrew/include
+CXX_INCLUDES = -isystem /usr/local/include -isystem /opt/homebrew/include
 
 CXX_FLAGSarm64 =  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fopenmp
 

@@ -1,19 +1,19 @@
 [
 {
   "directory": "/Users/alaricsanders/mygh/ED_DOQSI/build",
-  "command": "/opt/homebrew/bin/g++-14 -DH5_BUILT_AS_DYNAMIC_LIB -DXDIAG_USE_HDF5 -isystem /Users/alaricsanders/gh/xdiag/install/include -isystem /opt/homebrew/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fopenmp -o CMakeFiles/tfim.dir/tests/tfim.cpp.o -c /Users/alaricsanders/mygh/ED_DOQSI/tests/tfim.cpp",
+  "command": "/opt/homebrew/bin/g++-14 -DH5_BUILT_AS_DYNAMIC_LIB -DXDIAG_USE_HDF5 -isystem /usr/local/include -isystem /opt/homebrew/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fopenmp -o CMakeFiles/tfim.dir/tests/tfim.cpp.o -c /Users/alaricsanders/mygh/ED_DOQSI/tests/tfim.cpp",
   "file": "/Users/alaricsanders/mygh/ED_DOQSI/tests/tfim.cpp",
   "output": "CMakeFiles/tfim.dir/tests/tfim.cpp.o"
 },
 {
   "directory": "/Users/alaricsanders/mygh/ED_DOQSI/build",
-  "command": "/opt/homebrew/bin/g++-14 -DH5_BUILT_AS_DYNAMIC_LIB -DXDIAG_USE_HDF5 -isystem /Users/alaricsanders/gh/xdiag/install/include -isystem /opt/homebrew/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fopenmp -o CMakeFiles/tfim_no_sym.dir/tests/tfim_no_sym.cpp.o -c /Users/alaricsanders/mygh/ED_DOQSI/tests/tfim_no_sym.cpp",
+  "command": "/opt/homebrew/bin/g++-14 -DH5_BUILT_AS_DYNAMIC_LIB -DXDIAG_USE_HDF5 -isystem /usr/local/include -isystem /opt/homebrew/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fopenmp -o CMakeFiles/tfim_no_sym.dir/tests/tfim_no_sym.cpp.o -c /Users/alaricsanders/mygh/ED_DOQSI/tests/tfim_no_sym.cpp",
   "file": "/Users/alaricsanders/mygh/ED_DOQSI/tests/tfim_no_sym.cpp",
   "output": "CMakeFiles/tfim_no_sym.dir/tests/tfim_no_sym.cpp.o"
 },
 {
   "directory": "/Users/alaricsanders/mygh/ED_DOQSI/build",
-  "command": "/opt/homebrew/bin/g++-14 -DH5_BUILT_AS_DYNAMIC_LIB -DXDIAG_USE_HDF5 -isystem /Users/alaricsanders/gh/xdiag/install/include -isystem /opt/homebrew/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fopenmp -o CMakeFiles/heischain.dir/tests/heischain.cpp.o -c /Users/alaricsanders/mygh/ED_DOQSI/tests/heischain.cpp",
+  "command": "/opt/homebrew/bin/g++-14 -DH5_BUILT_AS_DYNAMIC_LIB -DXDIAG_USE_HDF5 -isystem /usr/local/include -isystem /opt/homebrew/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fopenmp -o CMakeFiles/heischain.dir/tests/heischain.cpp.o -c /Users/alaricsanders/mygh/ED_DOQSI/tests/heischain.cpp",
   "file": "/Users/alaricsanders/mygh/ED_DOQSI/tests/heischain.cpp",
   "output": "CMakeFiles/heischain.dir/tests/heischain.cpp.o"
 },
@@ -25,8 +25,14 @@
 },
 {
   "directory": "/Users/alaricsanders/mygh/ED_DOQSI/build",
-  "command": "/opt/homebrew/bin/g++-14 -DH5_BUILT_AS_DYNAMIC_LIB -DXDIAG_USE_HDF5 -isystem /Users/alaricsanders/gh/xdiag/install/include -isystem /opt/homebrew/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fopenmp -o CMakeFiles/pyro16.dir/pyro16.cpp.o -c /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cpp",
+  "command": "/opt/homebrew/bin/g++-14 -DH5_BUILT_AS_DYNAMIC_LIB -DXDIAG_USE_HDF5 -isystem /usr/local/include -isystem /opt/homebrew/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fopenmp -o CMakeFiles/pyro16.dir/pyro16.cpp.o -c /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cpp",
   "file": "/Users/alaricsanders/mygh/ED_DOQSI/pyro16.cpp",
   "output": "CMakeFiles/pyro16.dir/pyro16.cpp.o"
+},
+{
+  "directory": "/Users/alaricsanders/mygh/ED_DOQSI/build",
+  "command": "/opt/homebrew/bin/g++-14 -DH5_BUILT_AS_DYNAMIC_LIB -DXDIAG_USE_HDF5 -isystem /usr/local/include -isystem /opt/homebrew/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fopenmp -o CMakeFiles/pyro16_syms.dir/pyro16_syms.cpp.o -c /Users/alaricsanders/mygh/ED_DOQSI/pyro16_syms.cpp",
+  "file": "/Users/alaricsanders/mygh/ED_DOQSI/pyro16_syms.cpp",
+  "output": "CMakeFiles/pyro16_syms.dir/pyro16_syms.cpp.o"
 }
 ]

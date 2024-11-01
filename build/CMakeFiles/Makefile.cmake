@@ -7,10 +7,6 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/Users/alaricsanders/gh/xdiag/install/lib/cmake/xdiag/xdiag-static-targets-release.cmake"
-  "/Users/alaricsanders/gh/xdiag/install/lib/cmake/xdiag/xdiag-static-targets.cmake"
-  "/Users/alaricsanders/gh/xdiag/install/lib/cmake/xdiag/xdiagConfig.cmake"
-  "/Users/alaricsanders/gh/xdiag/install/lib/cmake/xdiag/xdiagConfigVersion.cmake"
   "/Users/alaricsanders/mygh/ED_DOQSI/CMakeLists.txt"
   "CMakeFiles/3.30.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.30.2/CMakeCXXCompiler.cmake"
@@ -46,6 +42,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/lib/cmake/hdf5/hdf5-config.cmake"
   "/opt/homebrew/lib/cmake/hdf5/hdf5-targets-release.cmake"
   "/opt/homebrew/lib/cmake/hdf5/hdf5-targets.cmake"
+  "/usr/local/lib/cmake/xdiag/xdiag-static-targets-release.cmake"
+  "/usr/local/lib/cmake/xdiag/xdiag-static-targets.cmake"
+  "/usr/local/lib/cmake/xdiag/xdiagConfig.cmake"
+  "/usr/local/lib/cmake/xdiag/xdiagConfigVersion.cmake"
   )
 
 # The corresponding makefile is:
@@ -66,4 +66,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/heischain.dir/DependInfo.cmake"
   "CMakeFiles/rationalmath.dir/DependInfo.cmake"
   "CMakeFiles/pyro16.dir/DependInfo.cmake"
+  "CMakeFiles/pyro16_syms.dir/DependInfo.cmake"
   )

@@ -92,7 +92,7 @@ pyro16_EXTERNAL_OBJECTS =
 
 pyro16: CMakeFiles/pyro16.dir/pyro16.cpp.o
 pyro16: CMakeFiles/pyro16.dir/build.make
-pyro16: /Users/alaricsanders/gh/xdiag/install/lib/libxdiag.a
+pyro16: /usr/local/lib/libxdiag.a
 pyro16: /opt/homebrew/Cellar/gcc/14.2.0/lib/gcc/current/libgomp.dylib
 pyro16: /opt/homebrew/lib/libhdf5_cpp.310.0.4.dylib
 pyro16: /opt/homebrew/lib/libhdf5.310.4.0.dylib

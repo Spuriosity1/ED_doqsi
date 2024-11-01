@@ -92,7 +92,7 @@ heischain_EXTERNAL_OBJECTS =
 
 heischain: CMakeFiles/heischain.dir/tests/heischain.cpp.o
 heischain: CMakeFiles/heischain.dir/build.make
-heischain: /Users/alaricsanders/gh/xdiag/install/lib/libxdiag.a
+heischain: /usr/local/lib/libxdiag.a
 heischain: /opt/homebrew/Cellar/gcc/14.2.0/lib/gcc/current/libgomp.dylib
 heischain: /opt/homebrew/lib/libhdf5_cpp.310.0.4.dylib
 heischain: /opt/homebrew/lib/libhdf5.310.4.0.dylib

@@ -92,7 +92,7 @@ tfim_no_sym_EXTERNAL_OBJECTS =
 
 tfim_no_sym: CMakeFiles/tfim_no_sym.dir/tests/tfim_no_sym.cpp.o
 tfim_no_sym: CMakeFiles/tfim_no_sym.dir/build.make
-tfim_no_sym: /Users/alaricsanders/gh/xdiag/install/lib/libxdiag.a
+tfim_no_sym: /usr/local/lib/libxdiag.a
 tfim_no_sym: /opt/homebrew/Cellar/gcc/14.2.0/lib/gcc/current/libgomp.dylib
 tfim_no_sym: /opt/homebrew/lib/libhdf5_cpp.310.0.4.dylib
 tfim_no_sym: /opt/homebrew/lib/libhdf5.310.4.0.dylib

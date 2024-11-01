@@ -181,6 +181,19 @@ pyro16/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pyro16.dir/build.make CMakeFiles/pyro16.dir/build
 .PHONY : pyro16/fast
 
+#=============================================================================
+# Target rules for targets named pyro16_syms
+
+# Build rule for target.
+pyro16_syms: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pyro16_syms
+.PHONY : pyro16_syms
+
+# fast build rule for target.
+pyro16_syms/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pyro16_syms.dir/build.make CMakeFiles/pyro16_syms.dir/build
+.PHONY : pyro16_syms/fast
+
 pyro16.o: pyro16.cpp.o
 .PHONY : pyro16.o
 
@@ -204,6 +217,30 @@ pyro16.s: pyro16.cpp.s
 pyro16.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pyro16.dir/build.make CMakeFiles/pyro16.dir/pyro16.cpp.s
 .PHONY : pyro16.cpp.s
+
+pyro16_syms.o: pyro16_syms.cpp.o
+.PHONY : pyro16_syms.o
+
+# target to build an object file
+pyro16_syms.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pyro16_syms.dir/build.make CMakeFiles/pyro16_syms.dir/pyro16_syms.cpp.o
+.PHONY : pyro16_syms.cpp.o
+
+pyro16_syms.i: pyro16_syms.cpp.i
+.PHONY : pyro16_syms.i
+
+# target to preprocess a source file
+pyro16_syms.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pyro16_syms.dir/build.make CMakeFiles/pyro16_syms.dir/pyro16_syms.cpp.i
+.PHONY : pyro16_syms.cpp.i
+
+pyro16_syms.s: pyro16_syms.cpp.s
+.PHONY : pyro16_syms.s
+
+# target to generate assembly for a file
+pyro16_syms.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pyro16_syms.dir/build.make CMakeFiles/pyro16_syms.dir/pyro16_syms.cpp.s
+.PHONY : pyro16_syms.cpp.s
 
 tests/heischain.o: tests/heischain.cpp.o
 .PHONY : tests/heischain.o
@@ -311,12 +348,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... heischain"
 	@echo "... pyro16"
+	@echo "... pyro16_syms"
 	@echo "... rationalmath"
 	@echo "... tfim"
 	@echo "... tfim_no_sym"
 	@echo "... pyro16.o"
 	@echo "... pyro16.i"
 	@echo "... pyro16.s"
+	@echo "... pyro16_syms.o"
+	@echo "... pyro16_syms.i"
+	@echo "... pyro16_syms.s"
 	@echo "... tests/heischain.o"
 	@echo "... tests/heischain.i"
 	@echo "... tests/heischain.s"

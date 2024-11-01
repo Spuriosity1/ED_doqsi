@@ -252,7 +252,7 @@ hello_world_IS_TOP_LEVEL:STATIC=ON
 hello_world_SOURCE_DIR:STATIC=/Users/alaricsanders/mygh/ED_DOQSI
 
 //The directory containing a CMake configuration file for xdiag.
-xdiag_DIR:PATH=/Users/alaricsanders/gh/xdiag/install/lib/cmake/xdiag
+xdiag_DIR:PATH=/usr/local/lib/cmake/xdiag
 
 
 ########################

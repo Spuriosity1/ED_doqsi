@@ -5,7 +5,7 @@ project(
   hello_world
 )
 
-find_package(xdiag REQUIRED HINTS "../../gh/xdiag/install")
+find_package(xdiag REQUIRED)
 
 # the tests
 add_executable(tfim tests/tfim.cpp)
@@ -22,3 +22,6 @@ add_executable(rationalmath tests/rationalmath.cpp)
 # main files
 add_executable(pyro16 pyro16.cpp)
 target_link_libraries(pyro16 PRIVATE xdiag::xdiag)
+
+add_executable(pyro16_syms pyro16_syms.cpp)
+target_link_libraries(pyro16_syms PRIVATE xdiag::xdiag)
