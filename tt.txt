@@ -1,0 +1,3016 @@
+Traceback (most recent call last):
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'MutableDenseMatrix'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'MutableDenseMatrix'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/alaricsanders/mygh/ED_DOQSI/scripts/test_build_lat.py", line 37, in <module>
+    full_lat = lattice.Lattice(primitive, [[-1,1,1],[1,-1,1],[1,1,-1]])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/mygh/ED_DOQSI/scripts/lattice.py", line 252, in __init__
+    self.populate_bonds()
+  File "/Users/alaricsanders/mygh/ED_DOQSI/scripts/lattice.py", line 286, in populate_bonds
+    from_idx=self.as_linear_idx(X0 + a.xyz),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/mygh/ED_DOQSI/scripts/lattice.py", line 326, in as_linear_idx
+    cell_idx, sl_idx = self.as_idx(xyz)
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/mygh/ED_DOQSI/scripts/lattice.py", line 310, in as_idx
+    cell_idx = floor(m)
+               ^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/cache.py", line 76, in wrapper
+    retval = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/function.py", line 821, in __new__
+    return cls._new_(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/function.py", line 470, in _new_
+    result = super().__new__(cls, *args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/cache.py", line 76, in wrapper
+    retval = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/function.py", line 307, in __new__
+    evaluated = cls.eval(*args)
+                ^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/functions/elementary/integers.py", line 54, in eval
+    spart += t
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1864, in __add__
+    return Rational.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/matrices/matrixbase.py", line 2989, in __radd__
+    return self + other
+           ~~~~~^~~~~~~
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1874, in __radd__
+    return Rational.__radd__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 1431, in __add__
+    return Number.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 76, in __sympifyit_wrapper
+    return func(a, b)
+           ^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/numbers.py", line 452, in __add__
+    return AtomicExpr.__add__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 117, in binary_op_wrapper
+    return f(self)
+           ^^^^^^^
+  File "/Users/alaricsanders/.virtualenvironment/py/lib/python3.12/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded

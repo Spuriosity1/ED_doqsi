@@ -9,6 +9,7 @@
 #include <vector>
 #include <xdiag/algebra/algebra.hpp>
 #include <xdiag/algebra/matrix.hpp>
+#include <xdiag/algorithms/lanczos/eigs_lanczos.hpp>
 #include <xdiag/algorithms/lanczos/eigvals_lanczos.hpp>
 #include <xdiag/all.hpp>
 #include <armadillo>
@@ -300,17 +301,15 @@ int main(int argc, char** argv) try {
 
 	// CALCULATING SYMMETRIES
 	auto syms = calc_symmetries();
-	auto rep = PermutationGroup(syms);
+	auto permgroup = PermutationGroup(syms);
 	
 
 	/////////////////////////////////////////////
 	//// PERFORMING THE DIAGONALISATION (Lanczos)
 	///
 	auto block = Spinhalf(16);
-	std::vector<string> statev = {"Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn"};
-	auto init_state = product(block, statev);
+
 	auto lanczos_res = eigs_lanczos(ops, block, 
-			init_state, 
 			NSTATES,
 			/* precision */ 1e-14,
 			/* max iter */ 10000,
@@ -321,19 +320,16 @@ int main(int argc, char** argv) try {
 	auto gs = lanczos_res.eigenvectors.col(0);
 	gs.make_complex();
 
-	//////////////////////////////////////////
-	/// DIAGONALISATION (full)
-	///
-	cerr <<"\n\n\nBeginning full diagonalisation"<<std::endl;
-	auto H = matrixC(ops, block, block);
-	assert(H.is_hermitian(1e-8));
+
+	std::vector<eigs_lanczos_result_t> block_results;
+
+	for (const auto& [k, irrep] : irreps){
+		auto block = Spinhalf(16, permgroup, irrep);
+		auto lanczos_res = eigvals_lanczos(ops, block, 4); // compute ground state energy
+		cerr << "k = " << k << ", iter criterion -> " <<  lanczos_res.criterion << endl;
+		eigvals.push_back(lanczos_res);
+	}
 	
-
-	arma::vec eigs;
-	auto res = arma::eig_sym(eigs, H);
-	std::cout<<"Exact spectrum:"<<eigs;
-
-	cout<<"\n\n\n";
 	//////////////////////////////////////////
 	//// OUTPUT
 	///
@@ -367,14 +363,6 @@ int main(int argc, char** argv) try {
 
 
 	
-	/*
-	for (const auto& [k, irrep] : irreps){
-		auto block = Spinhalf(N, permgroup, irrep);
-		auto lanczos_res = eigvals_lanczos(ops, block, 4); // compute ground state energy
-		cerr << "k = " << k << ", iter criterion -> " <<  lanczos_res.criterion << endl;
-		eigvals.push_back(lanczos_res.eigenvalues);
-	}
-	*/
 
 } catch (Error e) {
 	error_trace(e);

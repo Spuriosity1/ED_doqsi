@@ -285,19 +285,6 @@ int main(int argc, char** argv) try {
 	gs.make_complex();
 
 	//////////////////////////////////////////
-	/// DIAGONALISATION (full)
-	///
-	cerr <<"\n\n\nBeginning full diagonalisation"<<std::endl;
-	auto H = matrixC(ops, block, block);
-	assert(H.is_hermitian(1e-8));
-	
-
-	arma::vec eigs;
-	auto res = arma::eig_sym(eigs, H);
-	std::cout<<"Exact spectrum:"<<eigs;
-
-	cout<<"\n\n\n";
-	//////////////////////////////////////////
 	//// OUTPUT
 	///
 
@@ -328,7 +315,19 @@ int main(int argc, char** argv) try {
 		sl = (++sl)%4;
 	}
 
+	//////////////////////////////////////////
+	/// DIAGONALISATION (full)
+	///
+	cerr <<"\n\n\nBeginning full diagonalisation"<<std::endl;
+	auto H = matrixC(ops, block, block);
+	assert(H.is_hermitian(1e-8));
+	
 
+	arma::vec eigs;
+	auto res = arma::eig_sym(eigs, H);
+	std::cout<<"Exact spectrum:"<<eigs;
+
+	cout<<"\n\n\n";
 	
 	/*
 	for (const auto& [k, irrep] : irreps){
