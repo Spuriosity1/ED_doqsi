@@ -48,12 +48,18 @@ def get_symmetries(lat, strip_trivial=False):
         "T2": T2,
         "T3": T3,
         "I": I,
-        'P01': full_lat.get_refl_perm(origin=Matrix([0, 1, 1]), 
+        'P01': full_lat.get_refl_perm(origin=Matrix([1, 1, 1]),
                                       direction=Matrix([0, 1, 1])),
-        'P02': full_lat.get_refl_perm(origin=Matrix([1, 0, 1]), 
+        'P02': full_lat.get_refl_perm(origin=Matrix([1, 1, 1]),
                                       direction=Matrix([1, 0, 1])),
-        'P03': full_lat.get_refl_perm(origin=Matrix([1, 1, 0]), 
-                                      direction=Matrix([1, 1, 0]))
+        'P03': full_lat.get_refl_perm(origin=Matrix([1, 1, 1]),
+                                      direction=Matrix([1, 1, 0])),
+        'P12': full_lat.get_refl_perm(origin=Matrix([1, 1, 1]),
+                                      direction=Matrix([0, 1, -1])),
+        'P23': full_lat.get_refl_perm(origin=Matrix([1, 1, 1]),
+                                      direction=Matrix([0, 1, -1])),
+        'P31': full_lat.get_refl_perm(origin=Matrix([1, 1, 1]),
+                                      direction=Matrix([0, 1, -1])),
     }
 
     if not strip_trivial:

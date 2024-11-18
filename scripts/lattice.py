@@ -398,7 +398,7 @@ class Lattice:
 
     def get_refl_perm(self, origin: Matrix, direction: Matrix):
         """
-        Returns permutations corresponding to (possibly trivial) reflection
+        Returns a permutation corresponding to (possibly trivial) reflection
         in the planes normal to 'direction' passing
         through 'origin'
         """
@@ -415,3 +415,21 @@ class Lattice:
             perm.append(transl_idx)
 
         return perm
+
+    def get_rot_perm(self, origin: Matrix, rot_mat: Matrix):
+        """
+        Returns the permutation of the site indices associated with a global
+        rotation by 2π/3
+        """
+        perm = []
+
+        for (orig_idx, a) in enumerate(self.atoms):
+            relpos = a.xyz - origin
+            # project on to direction
+            delta = rot_mat.dot(relpos)
+            transl_idx = self.as_linear_idx(a.xyz + delta)
+            perm.append(transl_idx)
+
+        return perm
+
+
