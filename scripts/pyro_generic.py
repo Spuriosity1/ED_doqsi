@@ -115,11 +115,9 @@ def diagonalise(basis, H, lat, krylov_dim=50):
 
     # m_GS = 150  # Krylov subspace dimension
     #
-    # Lanczos finds the largest-magnitude eigenvalues:
-    E, V, Q_T = lanczos.lanczos_full(H, v0, krylov_dim, full_ortho=False)
+    E, V = H.eigsh(time=0.0, k=krylov_dim, which="LA")
     # compute ground state vector
-    psi_GS_lanczos = lanczos.lin_comb_Q_T(V[:, 0], Q_T)
-    return E[0], psi_GS_lanczos
+    return E[0], V[:, 0]
 
 
 def calc_ringflip(psi_GS_lanczos, lat):
