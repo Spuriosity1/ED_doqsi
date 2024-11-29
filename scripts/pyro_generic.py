@@ -48,17 +48,17 @@ def get_symmetries(lat, strip_trivial=False):
         "T2": T2,
         "T3": T3,
         "I": I,
-        'P01': full_lat.get_refl_perm(origin=Matrix([1, 1, 1]),
-                                      direction=Matrix([0, 1, 1])),
-        'P02': full_lat.get_refl_perm(origin=Matrix([1, 1, 1]),
-                                      direction=Matrix([1, 0, 1])),
-        'P03': full_lat.get_refl_perm(origin=Matrix([1, 1, 1]),
-                                      direction=Matrix([1, 1, 0])),
-        'P12': full_lat.get_refl_perm(origin=Matrix([1, 1, 1]),
-                                      direction=Matrix([0, 1, -1])),
-        'P23': full_lat.get_refl_perm(origin=Matrix([1, 1, 1]),
-                                      direction=Matrix([0, 1, -1])),
-        'P31': full_lat.get_refl_perm(origin=Matrix([1, 1, 1]),
+        'P01': lat.get_refl_perm(origin=Matrix([1, 1, 1]),
+                                 direction=Matrix([0, 1, 1])),
+        'P02': lat.get_refl_perm(origin=Matrix([1, 1, 1]),
+                                 direction=Matrix([1, 0, 1])),
+        'P03': lat.get_refl_perm(origin=Matrix([1, 1, 1]),
+                                 direction=Matrix([1, 1, 0])),
+        'P12': lat.get_refl_perm(origin=Matrix([1, 1, 1]),
+                                 direction=Matrix([0, 1, -1])),
+        'P23': lat.get_refl_perm(origin=Matrix([1, 1, 1]),
+                                 direction=Matrix([0, 1, -1])),
+        'P31': lat.get_refl_perm(origin=Matrix([1, 1, 1]),
                                       direction=Matrix([0, 1, -1])),
     }
 
@@ -98,12 +98,7 @@ def calc_hamiltonian(hamspec, silent=False, **kwargs):
     if silent:
         ham_kwargs = dict(check_herm=False, check_symm=False)
 
-    if basis.Ns < 10000:
-        H = hamiltonian(hamspec["static"], [], basis=basis,
-            dtype=np.complex128,
-            **ham_kwargs)
-    else:
-        H = quantum_LinearOperator(hamspec["static"], basis=basis,
+    H = quantum_LinearOperator(hamspec["static"], basis=basis,
             dtype=np.complex128,
             **ham_kwargs)
 
@@ -115,7 +110,7 @@ def diagonalise(basis, H, lat, krylov_dim=50):
 
     # m_GS = 150  # Krylov subspace dimension
     #
-    E, V = H.eigsh(time=0.0, k=krylov_dim, which="LA")
+    E, V = H.eigsh(k=krylov_dim, which="SA")
     # compute ground state vector
     return E[0], V[:, 0]
 
