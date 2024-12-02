@@ -1,7 +1,8 @@
 #include <cmath>
-#include <complex>
+#include <chrono>
 #include <cstdint>
 #include <iostream>
+#include <nlohmann/json_fwd.hpp>
 #include <ostream>
 #include <stdexcept>
 #include <utility>
@@ -15,9 +16,19 @@
 #include <xdiag/common.hpp>
 #include <xdiag/operators/opsum.hpp>
 #include <xdiag/utils/say_hello.hpp>
+#include <nlohmann/json.hpp>
 
 using namespace xdiag;
+using json = nlohmann::json;
 
+std::string getISOCurrentTimestamp()
+{
+	time_t now;
+    time(&now);
+    char buf[sizeof "2011-10-08T07:07:09Z"];
+    strftime(buf, sizeof buf, "%FT%TZ", gmtime(&now));
+	return std::string(buf);
+}
 
 // the Paulis
 static const arma::mat sigma_x("0 1; 1 0");
@@ -287,11 +298,17 @@ int main(int argc, char** argv) try {
 	//////////////////////////////////////////
 	//// OUTPUT
 	///
+	///
+	json out;
+	out["lattice"] = {};
+	out["energies"] = lanczos_res.eigenvalues;
 
 	std::cout<<"Energy values:\n"<<lanczos_res.eigenvalues<<std::endl;
 
 	std::cout<<"SZ expectation values:\n";
 	std::cout<<"sublat\tX\tY\tZ\t<Sz>\n"; 
+
+	std::vector<double> Sz_list;
 
 	for (int J=0; J<16; J++){
 		auto R1=pyro_sites[J];
@@ -299,12 +316,26 @@ int main(int argc, char** argv) try {
 		arma::cx_double SZ = innerC(Op("SZ",1, J), gs);
 		printf("%d\t%+1lld\t%+1lld\t%+1lld\t%16.7e\n", 
 				J%4, R1[0],R1[1],R1[2], SZ.real());
+
+		Sz_list.push_back(SZ.real());
+
 	}
+
+	out["lattice"]["spin_sites"] = pyro_sites;
+	out["Sz"] = Sz_list;
+
+
+
 	std::cout<<"Plaq expectation values:\n";
 	auto hexa_list = get_hexa_list();
 	std::cout<<"sublat\tX\tY\tZ\tRe<O>\tIm<O>\n"; 
 
 	int sl=0;
+
+	std::vector<double> re_ringflip;
+	std::vector<double> im_ringflip;
+	std::vector<ivec3> plaq_sites;
+
 	for (auto& [R1, op] : hexa_list){
 		arma::cx_double exp_O = innerC(op, gs);
 	
@@ -312,32 +343,22 @@ int main(int argc, char** argv) try {
 				sl, R1[0],R1[1],R1[2],
 				exp_O.real(), exp_O.imag());
 
+		re_ringflip.push_back(exp_O.real());
+		re_ringflip.push_back(exp_O.imag());
 		sl = (++sl)%4;
 	}
 
-	//////////////////////////////////////////
-	/// DIAGONALISATION (full)
-	///
-	cerr <<"\n\n\nBeginning full diagonalisation"<<std::endl;
-	auto H = matrixC(ops, block, block);
-	assert(H.is_hermitian(1e-8));
-	
+	out["lattice"]["plaq_sites"] = plaq_sites;
+	out["re_ringflip"] = re_ringflip;
+	out["im_ringflip"] = im_ringflip;
+	out["Jpm"] = atof(argv[1])/2;
+	out["B"] = B;
 
-	arma::vec eigs;
-	auto res = arma::eig_sym(eigs, H);
-	std::cout<<"Exact spectrum:"<<eigs;
 
-	cout<<"\n\n\n";
-	
-	/*
-	for (const auto& [k, irrep] : irreps){
-		auto block = Spinhalf(N, permgroup, irrep);
-		auto lanczos_res = eigvals_lanczos(ops, block, 4); // compute ground state energy
-		cerr << "k = " << k << ", iter criterion -> " <<  lanczos_res.criterion << endl;
-		eigvals.push_back(lanczos_res.eigenvalues);
-	}
-	*/
-
+	// save to file
+	//
+	std::ofstream file("output/out_pyro16_"+getISOCurrentTimestamp()+".json");
+    file << out;
 } catch (Error e) {
 	error_trace(e);
 }

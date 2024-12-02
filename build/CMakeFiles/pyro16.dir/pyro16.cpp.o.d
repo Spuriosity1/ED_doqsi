@@ -111,9 +111,18 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/poly_hermite.tcc \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/poly_laguerre.tcc \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/riemann_zeta.tcc \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/complex \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/sstream \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/istream \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/chrono \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/chrono.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ratio \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/cstdint \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ctime \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/time.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_clock_t.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_time_t.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_timespec.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/parse_numbers.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/iostream \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ostream \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ios \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/iosfwd \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stringfwd.h \
@@ -131,10 +140,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: \
  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_ctermid.h \
  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_off_t.h \
  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_ssize_t.h \
- /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/time.h \
- /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_clock_t.h \
- /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_time_t.h \
- /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_timespec.h \
  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_wctype.h \
  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/__wctype.h \
  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_wint_t.h \
@@ -228,25 +233,44 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/aarch64-apple-darwin23/bits/ctype_inline.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/locale_facets.tcc \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/basic_ios.tcc \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ostream \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/ostream.tcc \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/istream \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/istream.tcc \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/sstream.tcc \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/cstdint \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/iostream \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/utility \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_relops.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/vector \
+ /opt/homebrew/include/nlohmann/json_fwd.hpp \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/map \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_tree.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ext/aligned_buffer.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/node_handle.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_map.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_multimap.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/erase_if.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/memory \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_tempbuf.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_uninitialized.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_raw_storage_iter.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/align.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unique_ptr.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/shared_ptr.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/shared_ptr_base.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/allocated_ptr.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ext/concurrence.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/shared_ptr_atomic.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/atomic_base.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/atomic_lockfree_defines.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/backward/auto_ptr.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/pstl/glue_memory_defs.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/pstl/execution_defs.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/vector \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_vector.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_bvector.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/vector.tcc \
+ /opt/homebrew/include/nlohmann/detail/abi_macros.hpp \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/utility \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_relops.h \
  /usr/local/include/xdiag/algebra/algebra.hpp \
  /usr/local/include/xdiag/blocks/blocks.hpp \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/variant \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/enable_special_members.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/parse_numbers.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ext/aligned_buffer.h \
  /usr/local/include/xdiag/blocks/electron.hpp \
  /usr/local/include/xdiag/basis/electron/basis_electron.hpp \
  /usr/local/include/xdiag/basis/electron/basis_no_np.hpp \
@@ -254,6 +278,9 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/cassert \
  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/assert.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/stdlib.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/complex \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/sstream \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/sstream.tcc \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/math.h \
  /usr/local/include/xdiag/bits/bitops.hpp \
  /usr/local/include/xdiag/bits/extract_deposit.hpp \
@@ -275,7 +302,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: \
  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/arm/limits.h \
  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/arm/_limits.h \
  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/syslimits.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ctime \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/fstream \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/codecvt.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/aarch64-apple-darwin23/bits/basic_file.h \
@@ -286,15 +312,7 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/algorithmfwd.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_heap.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/uniform_int_dist.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_tempbuf.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/pstl/glue_algorithm_defs.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/pstl/execution_defs.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/map \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_tree.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/node_handle.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_map.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_multimap.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/erase_if.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/random \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/random.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/aarch64-apple-darwin23/bits/opt_random.h \
@@ -310,24 +328,14 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/hashtable_policy.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/array \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/compare \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/chrono \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/chrono.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ratio \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/mutex \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_mutex.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unique_lock.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/condition_variable \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/shared_ptr.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/shared_ptr_base.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/allocated_ptr.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/unique_ptr.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ext/concurrence.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/thread \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_thread.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/this_thread_sleep.h \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/atomic \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/atomic_base.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/atomic_lockfree_defines.h \
  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/unistd.h \
  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/unistd.h \
  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_posix_vdisable.h \
@@ -992,12 +1000,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: \
  /usr/local/include/xdiag/utils/logger.hpp \
  /usr/local/include/xdiag/utils/logger_serial.hpp \
  /usr/local/include/xdiag/extern/fmt/format.hpp \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/memory \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_raw_storage_iter.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/align.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/shared_ptr_atomic.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/backward/auto_ptr.h \
- /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/pstl/glue_memory_defs.h \
  /usr/local/include/xdiag/extern/fmt/core.hpp \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/iterator \
  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stream_iterator.h \
@@ -1165,4 +1167,66 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: \
  /usr/local/include/xdiag/io/hdf5/file_h5_handler.hpp \
  /usr/local/include/xdiag/io/hdf5/file_h5_subview.hpp \
  /usr/local/include/xdiag/io/file_toml.hpp \
- /opt/homebrew/include/armadillo
+ /opt/homebrew/include/armadillo /opt/homebrew/include/nlohmann/json.hpp \
+ /opt/homebrew/include/nlohmann/adl_serializer.hpp \
+ /opt/homebrew/include/nlohmann/detail/conversions/from_json.hpp \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/forward_list \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/forward_list.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/forward_list.tcc \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/valarray \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/valarray_array.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/valarray_array.tcc \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/valarray_before.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/slice_array.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/valarray_after.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/gslice.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/gslice_array.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/mask_array.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/indirect_array.h \
+ /opt/homebrew/include/nlohmann/detail/exceptions.hpp \
+ /opt/homebrew/include/nlohmann/detail/value_t.hpp \
+ /opt/homebrew/include/nlohmann/detail/macro_scope.hpp \
+ /opt/homebrew/include/nlohmann/detail/meta/detected.hpp \
+ /opt/homebrew/include/nlohmann/detail/meta/void_t.hpp \
+ /opt/homebrew/include/nlohmann/thirdparty/hedley/hedley.hpp \
+ /opt/homebrew/include/nlohmann/detail/string_escape.hpp \
+ /opt/homebrew/include/nlohmann/detail/input/position_t.hpp \
+ /opt/homebrew/include/nlohmann/detail/meta/cpp_future.hpp \
+ /opt/homebrew/include/nlohmann/detail/meta/type_traits.hpp \
+ /opt/homebrew/include/nlohmann/detail/iterators/iterator_traits.hpp \
+ /opt/homebrew/include/nlohmann/detail/meta/call_std/begin.hpp \
+ /opt/homebrew/include/nlohmann/detail/meta/call_std/end.hpp \
+ /opt/homebrew/include/nlohmann/detail/string_concat.hpp \
+ /opt/homebrew/include/nlohmann/detail/meta/identity_tag.hpp \
+ /opt/homebrew/include/nlohmann/detail/meta/std_fs.hpp \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/filesystem \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/fs_fwd.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/fs_path.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/codecvt \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/fs_dir.h \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/fs_ops.h \
+ /opt/homebrew/include/nlohmann/detail/conversions/to_json.hpp \
+ /opt/homebrew/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+ /opt/homebrew/include/nlohmann/byte_container_with_subtype.hpp \
+ /opt/homebrew/include/nlohmann/detail/hash.hpp \
+ /opt/homebrew/include/nlohmann/detail/input/binary_reader.hpp \
+ /opt/homebrew/include/nlohmann/detail/input/input_adapters.hpp \
+ /opt/homebrew/include/nlohmann/detail/input/json_sax.hpp \
+ /opt/homebrew/include/nlohmann/detail/input/lexer.hpp \
+ /opt/homebrew/include/nlohmann/detail/meta/is_sax.hpp \
+ /opt/homebrew/include/nlohmann/detail/input/parser.hpp \
+ /opt/homebrew/include/nlohmann/detail/iterators/internal_iterator.hpp \
+ /opt/homebrew/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+ /opt/homebrew/include/nlohmann/detail/iterators/iter_impl.hpp \
+ /opt/homebrew/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+ /opt/homebrew/include/nlohmann/detail/json_custom_base_class.hpp \
+ /opt/homebrew/include/nlohmann/detail/json_pointer.hpp \
+ /opt/homebrew/include/nlohmann/detail/json_ref.hpp \
+ /opt/homebrew/include/nlohmann/detail/output/binary_writer.hpp \
+ /opt/homebrew/include/nlohmann/detail/output/output_adapters.hpp \
+ /opt/homebrew/include/nlohmann/detail/output/serializer.hpp \
+ /opt/homebrew/include/nlohmann/detail/conversions/to_chars.hpp \
+ /opt/homebrew/include/nlohmann/ordered_map.hpp \
+ /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/any \
+ /opt/homebrew/include/nlohmann/detail/macro_unscope.hpp \
+ /opt/homebrew/include/nlohmann/thirdparty/hedley/hedley_undef.hpp

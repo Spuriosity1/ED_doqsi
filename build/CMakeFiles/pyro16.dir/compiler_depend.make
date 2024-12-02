@@ -169,6 +169,7 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/aarch64-apple-darwin23/bits/os_defines.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/aarch64-apple-darwin23/bits/time_members.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/algorithm \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/any \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/array \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/atomic \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/backward/auto_ptr.h \
@@ -198,12 +199,21 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/exception.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/exception_defines.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/exception_ptr.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/forward_list.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/forward_list.tcc \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/fs_dir.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/fs_fwd.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/fs_ops.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/fs_path.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/fstream.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/functexcept.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/functional_hash.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/gslice.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/gslice_array.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/hash_bytes.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/hashtable.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/hashtable_policy.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/indirect_array.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/invoke.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/ios_base.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/istream.tcc \
@@ -215,6 +225,7 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/locale_facets_nonio.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/locale_facets_nonio.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/localefwd.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/mask_array.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/memory_resource.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/memoryfwd.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/move.h \
@@ -236,6 +247,7 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/shared_ptr.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/shared_ptr_atomic.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/shared_ptr_base.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/slice_array.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/specfun.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/sstream.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_abs.h \
@@ -276,6 +288,10 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/uses_allocator.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/uses_allocator_args.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/utility.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/valarray_after.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/valarray_array.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/valarray_array.tcc \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/valarray_before.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/vector.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/version.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/cassert \
@@ -287,6 +303,7 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/climits \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/clocale \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/cmath \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/codecvt \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/compare \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/complex \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/concepts \
@@ -309,6 +326,8 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ext/numeric_traits.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ext/string_conversions.h \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ext/type_traits.h \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/filesystem \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/forward_list \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/fstream \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/functional \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/initializer_list \
@@ -361,6 +380,7 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/typeinfo \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/unordered_map \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/utility \
+  /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/valarray \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/variant \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/vector \
   /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/version \
@@ -430,6 +450,51 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
   /opt/homebrew/include/H5version.h \
   /opt/homebrew/include/armadillo \
   /opt/homebrew/include/hdf5.h \
+  /opt/homebrew/include/nlohmann/adl_serializer.hpp \
+  /opt/homebrew/include/nlohmann/byte_container_with_subtype.hpp \
+  /opt/homebrew/include/nlohmann/detail/abi_macros.hpp \
+  /opt/homebrew/include/nlohmann/detail/conversions/from_json.hpp \
+  /opt/homebrew/include/nlohmann/detail/conversions/to_chars.hpp \
+  /opt/homebrew/include/nlohmann/detail/conversions/to_json.hpp \
+  /opt/homebrew/include/nlohmann/detail/exceptions.hpp \
+  /opt/homebrew/include/nlohmann/detail/hash.hpp \
+  /opt/homebrew/include/nlohmann/detail/input/binary_reader.hpp \
+  /opt/homebrew/include/nlohmann/detail/input/input_adapters.hpp \
+  /opt/homebrew/include/nlohmann/detail/input/json_sax.hpp \
+  /opt/homebrew/include/nlohmann/detail/input/lexer.hpp \
+  /opt/homebrew/include/nlohmann/detail/input/parser.hpp \
+  /opt/homebrew/include/nlohmann/detail/input/position_t.hpp \
+  /opt/homebrew/include/nlohmann/detail/iterators/internal_iterator.hpp \
+  /opt/homebrew/include/nlohmann/detail/iterators/iter_impl.hpp \
+  /opt/homebrew/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+  /opt/homebrew/include/nlohmann/detail/iterators/iterator_traits.hpp \
+  /opt/homebrew/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+  /opt/homebrew/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+  /opt/homebrew/include/nlohmann/detail/json_custom_base_class.hpp \
+  /opt/homebrew/include/nlohmann/detail/json_pointer.hpp \
+  /opt/homebrew/include/nlohmann/detail/json_ref.hpp \
+  /opt/homebrew/include/nlohmann/detail/macro_scope.hpp \
+  /opt/homebrew/include/nlohmann/detail/macro_unscope.hpp \
+  /opt/homebrew/include/nlohmann/detail/meta/call_std/begin.hpp \
+  /opt/homebrew/include/nlohmann/detail/meta/call_std/end.hpp \
+  /opt/homebrew/include/nlohmann/detail/meta/cpp_future.hpp \
+  /opt/homebrew/include/nlohmann/detail/meta/detected.hpp \
+  /opt/homebrew/include/nlohmann/detail/meta/identity_tag.hpp \
+  /opt/homebrew/include/nlohmann/detail/meta/is_sax.hpp \
+  /opt/homebrew/include/nlohmann/detail/meta/std_fs.hpp \
+  /opt/homebrew/include/nlohmann/detail/meta/type_traits.hpp \
+  /opt/homebrew/include/nlohmann/detail/meta/void_t.hpp \
+  /opt/homebrew/include/nlohmann/detail/output/binary_writer.hpp \
+  /opt/homebrew/include/nlohmann/detail/output/output_adapters.hpp \
+  /opt/homebrew/include/nlohmann/detail/output/serializer.hpp \
+  /opt/homebrew/include/nlohmann/detail/string_concat.hpp \
+  /opt/homebrew/include/nlohmann/detail/string_escape.hpp \
+  /opt/homebrew/include/nlohmann/detail/value_t.hpp \
+  /opt/homebrew/include/nlohmann/json.hpp \
+  /opt/homebrew/include/nlohmann/json_fwd.hpp \
+  /opt/homebrew/include/nlohmann/ordered_map.hpp \
+  /opt/homebrew/include/nlohmann/thirdparty/hedley/hedley.hpp \
+  /opt/homebrew/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
   /usr/local/include/xdiag/algebra/algebra.hpp \
   /usr/local/include/xdiag/algebra/apply.hpp \
   /usr/local/include/xdiag/algebra/matrix.hpp \
@@ -1230,8 +1295,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/parallel/omp/omp_utils.hpp:
 
-/usr/local/include/xdiag/operators/op.hpp:
-
 /usr/local/include/xdiag/operators/compiler.hpp:
 
 /usr/local/include/xdiag/io/hdf5/file_h5_subview.hpp:
@@ -1330,8 +1393,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/translate_blas.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/translate_atlas.hpp:
-
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/subview_meat.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/subview_elem2_bones.hpp:
@@ -1339,8 +1400,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/subview_elem1_meat.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/subview_elem1_bones.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/subview_each_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/subview_cube_slices_meat.hpp:
 
@@ -1381,8 +1440,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/extern/toml++/impl/json_formatter.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/spop_normalise_meat.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/spop_norm_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/spop_misc_bones.hpp:
 
@@ -1476,10 +1533,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_stddev_bones.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/running_stat_vec_bones.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_sqrtmat_meat.hpp:
-
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_sqrtmat_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_sp_plus_meat.hpp:
@@ -1510,8 +1563,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_resize_meat.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_reshape_bones.hpp:
-
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_repmat_meat.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_repelem_bones.hpp:
@@ -1533,8 +1584,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_prod_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_princomp_meat.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_princomp_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_powmat_bones.hpp:
 
@@ -1684,13 +1733,9 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/newarp_SparseGenMatProd_meat.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/newarp_SparseGenMatProd_bones.hpp:
-
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/spop_mean_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/newarp_DoubleShiftQR_bones.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mul_syrk.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/mul_herk.hpp:
 
@@ -1706,11 +1751,21 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtSpGlue_bones.hpp:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_size_t.h:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtOp_meat.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtOpCube_meat.hpp:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtOpCube_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtGlue_meat.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtGlueCube_meat.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mp_misc.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/injector_meat.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/operator_plus.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/injector_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/include_superlu.hpp:
 
@@ -1720,21 +1775,19 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/hdf5_misc.hpp:
 
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/gmm_misc_bones.hpp:
+
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/gmm_full_meat.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/gmm_full_bones.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_cross_meat.hpp:
+/usr/local/include/xdiag/extern/gsl/assert:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/gmm_diag_bones.hpp:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/gmm_diag_meat.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_trapz_meat.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_trapz_bones.hpp:
-
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/streambuf_iterator.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_toeplitz_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_times_meat.hpp:
 
@@ -1742,11 +1795,17 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_times_bones.hpp:
 
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/atomic_base.h:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_solve_meat.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_interp1.hpp:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_relational_bones.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_solve_bones.hpp:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_quantile_meat.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_quantile_bones.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_cor_bones.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_polyval_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_polyfit_meat.hpp:
 
@@ -1758,39 +1817,35 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_polyfit_bones.hpp:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/libkern/_OSByteOrder.h:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_mvnrnd_meat.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_mvnrnd_bones.hpp:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_toeplitz_meat.hpp:
 
-/opt/homebrew/include/H5pubconf.h:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_mixed_meat.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_trimat.hpp:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_max_bones.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_mixed_bones.hpp:
-
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/random:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtGlueCube_bones.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_min_meat.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtGlueCube_meat.hpp:
-
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/postypes.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_min_bones.hpp:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_kron_meat.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_kron_bones.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_join_bones.hpp:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_hypot_meat.hpp:
 
-/opt/homebrew/include/H5TSdevelop.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_max_meat.hpp:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_histc_meat.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_hist_bones.hpp:
 
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/gmm_diag_bones.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_cross_meat.hpp:
+
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_cross_bones.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_cov_meat.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_cov_bones.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_cor_meat.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_affmul_meat.hpp:
 
@@ -1798,11 +1853,15 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_vectorise.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_var.hpp:
-
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_unique.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_trunc_log.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_mixed_bones.hpp:
+
+/opt/homebrew/include/H5pubconf.h:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_trimat.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_trig.hpp:
 
@@ -1823,10 +1882,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_sprandu.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_sort.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_types.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_solve.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_shift.hpp:
 
@@ -1862,6 +1917,8 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_princomp.hpp:
 
+/opt/homebrew/include/nlohmann/detail/json_pointer.hpp:
+
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_powmat.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_polyval.hpp:
@@ -1870,9 +1927,7 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_polyfit.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_solve_meat.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_cor_meat.hpp:
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/slice_array.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_norm.hpp:
 
@@ -1891,8 +1946,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_max.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_logmat.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_log_normpdf.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_log_det.hpp:
 
@@ -1962,8 +2015,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_cross.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_max_bones.hpp:
-
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_conv.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_cond_rcond.hpp:
@@ -1990,23 +2041,11 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fft_engine.hpp:
 
-/usr/local/include/xdiag/basis/electron/basis_np.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_relational_meat.hpp:
-
-/opt/homebrew/include/H5version.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_histc_bones.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_int32_t.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/eop_core_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/eglue_core_bones.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/eOp_meat.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/eOp_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtOp_bones.hpp:
 
@@ -2038,9 +2077,9 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/def_hdf5.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/cond_rel_bones.hpp:
-
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_rank.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/cond_rel_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/def_blas.hpp:
 
@@ -2056,6 +2095,8 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/arrayops_bones.hpp:
 
+/opt/homebrew/include/nlohmann/detail/input/binary_reader.hpp:
+
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/auxlib_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/arma_version.hpp:
@@ -2063,8 +2104,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/arma_forward.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/arma_str.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/arma_rng.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/config.hpp:
 
@@ -2102,17 +2141,11 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/constants_old.hpp:
 
+/opt/homebrew/include/nlohmann/detail/output/serializer.hpp:
+
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_trans.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/SpGlue_meat.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/running_stat_bones.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_join_meat.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_approx_equal.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/SpGlue_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_logmat_meat.hpp:
 
@@ -2134,15 +2167,13 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/Row_bones.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/ProxyCube.hpp:
-
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/Proxy.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/OpCube_meat.hpp:
 
-/usr/local/include/xdiag/combinatorics/binomial.hpp:
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/codecvt:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/Mat_bones.hpp:
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/gslice.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/MapMat_bones.hpp:
 
@@ -2202,10 +2233,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/Base_bones.hpp:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_ino64_t.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtGlue_bones.hpp:
-
 /opt/homebrew/include/H5Mpublic.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo:
@@ -2240,9 +2267,9 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_misc.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/field_bones.hpp:
-
 /opt/homebrew/include/H5FDioc.h:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/field_bones.hpp:
 
 /usr/local/include/xdiag/bits/popcnt.hpp:
 
@@ -2262,16 +2289,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/basis/tj/basis_symmetric_np.hpp:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/qos.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/SpSubview_col_list_meat.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_rank_meat.hpp:
-
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/stdexcept:
-
-/usr/local/include/xdiag/basis/tj/basis_np.hpp:
-
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/newarp_EigsSelect.hpp:
 
 /usr/local/include/xdiag/basis/spinhalf/basis_sz.hpp:
@@ -2283,6 +2300,16 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_gid_t.h:
 
 /usr/local/include/xdiag/basis/electron/basis_symmetric_no_np.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_solve_bones.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/atomic_base.h:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_interp1.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_relational_meat.hpp:
+
+/usr/local/include/xdiag/basis/electron/basis_np.hpp:
 
 /usr/local/include/xdiag/basis/electron/basis_electron.hpp:
 
@@ -2297,20 +2324,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_pinv.hpp:
 
 /usr/local/include/xdiag/algorithms/time_evolution/zahexpv.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_posix_vdisable.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_any.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/Base_meat.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/SizeMat_meat.hpp:
-
-/usr/local/include/xdiag/algorithms/norm_estimate.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/operator_plus.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/injector_bones.hpp:
 
 /usr/local/include/xdiag/utils/logger.hpp:
 
@@ -2332,15 +2345,109 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/algorithms/arnoldi/arnoldi_to_disk.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_hypot_meat.hpp:
-
 /usr/local/include/xdiag/algebra/matrix.hpp:
+
+/usr/local/include/xdiag/combinatorics/binomial.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/Mat_bones.hpp:
+
+/opt/homebrew/include/nlohmann/thirdparty/hedley/hedley.hpp:
+
+/opt/homebrew/include/nlohmann/ordered_map.hpp:
+
+/opt/homebrew/include/nlohmann/json.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_types.h:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_solve.hpp:
+
+/opt/homebrew/include/nlohmann/detail/value_t.hpp:
+
+/opt/homebrew/include/H5FDmirror.h:
+
+/opt/homebrew/include/nlohmann/detail/string_concat.hpp:
+
+/opt/homebrew/include/nlohmann/detail/output/output_adapters.hpp:
+
+/opt/homebrew/include/nlohmann/detail/output/binary_writer.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/Cube_meat.hpp:
+
+/opt/homebrew/include/nlohmann/detail/meta/is_sax.hpp:
+
+/opt/homebrew/include/nlohmann/detail/meta/detected.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/nested_exception.h:
+
+/opt/homebrew/include/nlohmann/detail/meta/cpp_future.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/eOpCube_meat.hpp:
+
+/opt/homebrew/include/nlohmann/detail/meta/call_std/end.hpp:
+
+/opt/homebrew/include/nlohmann/detail/meta/call_std/begin.hpp:
+
+/opt/homebrew/include/nlohmann/detail/macro_unscope.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_posix_vdisable.h:
+
+/opt/homebrew/include/nlohmann/detail/input/position_t.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_any.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/Base_meat.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/SizeMat_meat.hpp:
+
+/usr/local/include/xdiag/algorithms/norm_estimate.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/subview_each_bones.hpp:
+
+/opt/homebrew/include/nlohmann/detail/macro_scope.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_stdio.h:
+
+/opt/homebrew/include/nlohmann/detail/json_ref.hpp:
+
+/opt/homebrew/include/nlohmann/detail/json_custom_base_class.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/eOp_meat.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_reshape_bones.hpp:
+
+/opt/homebrew/include/nlohmann/detail/iterators/iteration_proxy.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/eOp_bones.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h:
+
+/opt/homebrew/include/nlohmann/detail/input/lexer.hpp:
+
+/opt/homebrew/include/nlohmann/detail/input/json_sax.hpp:
+
+/opt/homebrew/include/nlohmann/detail/input/input_adapters.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/arma_rng.hpp:
+
+/opt/homebrew/include/nlohmann/detail/conversions/to_json.hpp:
+
+/opt/homebrew/include/nlohmann/adl_serializer.hpp:
+
+/opt/homebrew/include/H5public.h:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stream_iterator.h:
+
+/opt/homebrew/include/nlohmann/detail/input/parser.hpp:
 
 /opt/homebrew/include/hdf5.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_cor.hpp:
 
 /opt/homebrew/include/armadillo:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_histc_bones.hpp:
+
+/opt/homebrew/include/H5version.h:
 
 /usr/local/include/xdiag/algorithms/time_evolution/time_evolution.hpp:
 
@@ -2358,17 +2465,7 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/include/H5VLconnector_passthru.h:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_atan2_meat.hpp:
-
-/usr/local/include/xdiag/states/product_state.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/auxlib_meat.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_chol_bones.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_mach_port_t.h:
-
-/opt/homebrew/include/H5Tpublic.h:
+/opt/homebrew/include/nlohmann/detail/meta/type_traits.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/pthread/pthread_impl.h:
 
@@ -2402,6 +2499,10 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_spones.hpp:
 
+/opt/homebrew/include/nlohmann/detail/meta/void_t.hpp:
+
+/opt/homebrew/include/nlohmann/byte_container_with_subtype.hpp:
+
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/spop_max_bones.hpp:
 
 /usr/local/include/xdiag/algorithms/arnoldi/arnoldi.hpp:
@@ -2420,6 +2521,10 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/include/H5FDsplitter.h:
 
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/backward/auto_ptr.h:
+
+/opt/homebrew/include/H5FDsec2.h:
+
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_repelem_meat.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/time.h:
@@ -2432,19 +2537,11 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/include/H5FDros3.h:
 
-/usr/local/include/xdiag/bits/extract_deposit.hpp:
+/opt/homebrew/include/H5FDpublic.h:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_normalise.hpp:
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/streambuf:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/machine/limits.h:
-
-/opt/homebrew/include/H5FDmulti.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/limits.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/arm/arch.h:
-
-/opt/homebrew/include/H5FDmpi.h:
+/opt/homebrew/include/H5FDmpio.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/string.h:
 
@@ -2452,37 +2549,23 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_conv_to.hpp:
 
-/opt/homebrew/include/H5FDmirror.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_relational_bones.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/traits.hpp:
-
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/aarch64-apple-darwin23/bits/atomic_word.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_hist_meat.hpp:
-
 /opt/homebrew/include/H5FDlog.h:
+
+/opt/homebrew/include/H5FDhdfs.h:
 
 /opt/homebrew/include/H5FDdevelop.h:
 
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/node_handle.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/wchar.h:
 
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_mutex.h:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/SpToDOp_meat.hpp:
 
-/opt/homebrew/include/H5Epublic.h:
+/opt/homebrew/include/H5FDcore.h:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_unique_bones.hpp:
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/mutex:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_range.hpp:
-
-/opt/homebrew/include/H5Epubgen.h:
+/opt/homebrew/include/H5ESpublic.h:
 
 /opt/homebrew/include/H5Cpublic.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/newarp_SymEigsSolver_meat.hpp:
-
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/algorithmfwd.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/clocale:
 
@@ -2506,11 +2589,19 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/math.h:
 
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/translate_atlas.hpp:
+
+/opt/homebrew/include/nlohmann/detail/conversions/to_chars.hpp:
+
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/version:
 
 /usr/local/include/xdiag/extern/toml++/impl/std_optional.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/MapMat_meat.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_min_bones.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/postypes.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/charconv.h:
 
@@ -2558,6 +2649,14 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ctime:
 
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_rank_meat.hpp:
+
+/opt/homebrew/include/nlohmann/detail/iterators/primitive_iterator.hpp:
+
+/usr/local/include/xdiag/basis/tj/basis_np.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/stdexcept:
+
 /usr/local/include/xdiag/extern/toml++/impl/preprocessor.hpp:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/string_view:
@@ -2570,17 +2669,13 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ratio:
 
-/opt/homebrew/include/H5ESdevelop.h:
-
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/CubeToMatOp_meat.hpp:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/aarch64-apple-darwin23/bits/ctype_inline.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/pstl/glue_algorithm_defs.h:
 
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/mutex:
-
-/opt/homebrew/include/H5ESpublic.h:
+/opt/homebrew/include/nlohmann/detail/meta/std_fs.hpp:
 
 /usr/local/include/xdiag/algorithms/lanczos/eigs_lanczos.hpp:
 
@@ -2598,6 +2693,10 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/math.h:
 
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/newarp_SparseGenMatProd_bones.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/fs_path.h:
+
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/limits:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_int64_t.h:
@@ -2605,6 +2704,10 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/arma_rng_cxx03.hpp:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/iterator:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/valarray_array.h:
+
+/opt/homebrew/include/H5ESdevelop.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_all_bones.hpp:
 
@@ -2618,23 +2721,35 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ios:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_quantile_meat.hpp:
-
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/iomanip:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/newarp_SymEigsSolver_meat.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/algorithmfwd.h:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_var.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/filesystem:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_hypot_bones.hpp:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ext/numeric_traits.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include/syslimits.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/inttypes.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/Op_meat.hpp:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/allocator.h:
 
 /opt/homebrew/include/H5FDdirect.h:
+
+/opt/homebrew/Cellar/gcc/14.2.0/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include/syslimits.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/inttypes.h:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/traits.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_hist_meat.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/aarch64-apple-darwin23/bits/atomic_word.h:
 
 /usr/local/include/xdiag/extern/toml++/impl/make_node.hpp:
 
@@ -2646,13 +2761,15 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/cond_rel_meat.hpp:
 
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/valarray_before.h:
+
+/opt/homebrew/include/nlohmann/detail/iterators/iter_impl.hpp:
+
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_intersect_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/constants.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_in_addr_t.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/nested_exception.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/ext/aligned_buffer.h:
 
@@ -2667,8 +2784,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/system_error:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/cwchar:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/gmm_misc_meat.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_key_t.h:
 
@@ -2691,6 +2806,12 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_normpdf.hpp:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/vector.tcc:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_blkcnt_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/pthread/sched.h:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/valarray_after.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/cpp_type_traits.h:
 
@@ -2730,7 +2851,9 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/aarch64-apple-darwin23/bits/cpu_defines.h:
 
-/opt/homebrew/include/H5FDhdfs.h:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_toeplitz_bones.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/streambuf_iterator.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_roots_bones.hpp:
 
@@ -2738,19 +2861,11 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/streambuf.tcc:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_va_list.h:
-
-/opt/homebrew/include/H5Dpublic.h:
-
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/unordered_map:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/newarp_SparseGenRealShiftSolve_bones.hpp:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_abs.h:
-
-/opt/homebrew/include/H5public.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stream_iterator.h:
 
 /usr/local/include/xdiag/extern/toml++/impl/parser.inl:
 
@@ -2772,10 +2887,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_raw_storage_iter.h:
 
-/opt/homebrew/include/H5FDmpio.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/streambuf:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/ctype.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/utility:
@@ -2789,6 +2900,8 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/Availability.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_pair.h:
+
+/opt/homebrew/include/nlohmann/detail/meta/identity_tag.hpp:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/locale_facets.h:
 
@@ -2810,11 +2923,9 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_iterator_base_types.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/wchar.h:
+/usr/local/include/xdiag/operators/op.hpp:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/SpToDOp_meat.hpp:
-
-/opt/homebrew/include/H5FDcore.h:
+/opt/homebrew/include/nlohmann/detail/iterators/internal_iterator.hpp:
 
 /usr/local/include/xdiag/extern/clara/clara.hpp:
 
@@ -2829,6 +2940,8 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/alloca.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_heap.h:
+
+/opt/homebrew/include/nlohmann/detail/abi_macros.hpp:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_function.h:
 
@@ -2847,8 +2960,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_interp2.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/eGlueCube_meat.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/Cube_meat.hpp:
 
 /usr/local/include/xdiag/config.hpp:
 
@@ -2878,6 +2989,10 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/bits/gbit.hpp:
 
+/opt/homebrew/include/H5Epublic.h:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/std_mutex.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/syslimits.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/cstdlib:
@@ -2890,7 +3005,13 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/sstream.tcc:
 
+/opt/homebrew/include/nlohmann/detail/exceptions.hpp:
+
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/specfun.h:
+
+/usr/local/include/xdiag/combinatorics/subsets.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/exception_defines.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/shared_ptr_atomic.h:
 
@@ -2950,8 +3071,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/climits:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_cov_bones.hpp:
-
 /usr/local/include/xdiag/utils/error.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_diff_bones.hpp:
@@ -2960,9 +3079,27 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_eig_gen.hpp:
 
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_log_normpdf.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/exception.h:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/indirect_array.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_fd_def.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/aarch64-apple-darwin23/bits/error_constants.h:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtGlueCube_bones.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_min_meat.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/random:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_unique_bones.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_range.hpp:
+
+/opt/homebrew/include/H5Epubgen.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/hashtable.h:
 
@@ -2970,9 +3107,31 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/hash_bytes.h:
 
+/usr/local/include/xdiag/symmetries/permutation.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_tree.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/qos.h:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/SpSubview_col_list_meat.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_sum_bones.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_fd_copy.h:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/fs_ops.h:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/fs_dir.h:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/forward_list.h:
+
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/distr_param.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/AvailabilityInternal.h:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_mvnrnd_bones.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/libkern/_OSByteOrder.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/SpSubview_col_list_bones.hpp:
 
@@ -2982,11 +3141,13 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/erase_if.h:
 
+/opt/homebrew/include/nlohmann/json_fwd.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/forward_list:
+
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/concept_check.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/pstl/glue_numeric_defs.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/chrono.h:
 
@@ -3001,8 +3162,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_inv.hpp:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/exception_ptr.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/pthread/sched.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_wctype.h:
 
@@ -3032,8 +3191,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/alloc_traits.h:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_cov_meat.hpp:
-
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/align.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_relops.h:
@@ -3042,27 +3199,19 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bit:
 
-/usr/local/include/xdiag/combinatorics/subsets.hpp:
-
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/exception_defines.h:
-
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/uses_allocator_args.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/AvailabilityVersions.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/select.h:
 
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/ProxyCube.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/any:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/arm/types.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/compare:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_blkcnt_t.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_toeplitz_meat.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_mixed_meat.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_kron_meat.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_join.hpp:
 
@@ -3076,6 +3225,10 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/strings.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/machine/limits.h:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_normalise.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_sigaltstack.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/aarch64-apple-darwin23/bits/os_defines.h:
@@ -3084,10 +3237,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tuple:
 
-/usr/local/include/xdiag/symmetries/permutation.hpp:
-
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/stl_tree.h:
-
 /usr/local/include/xdiag/extern/toml++/impl/print_to_stream.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_find.hpp:
@@ -3095,8 +3244,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/types.h:
 
 /opt/homebrew/include/H5Gpublic.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mp_misc.hpp:
 
 /usr/local/include/xdiag/extern/gsl/util:
 
@@ -3116,7 +3263,9 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/unistd.h:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_histc_meat.hpp:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mul_syrk.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/gslice_array.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/translate_arpack.hpp:
 
@@ -3132,10 +3281,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/libkern/arm/OSByteOrder.h:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_cor_bones.hpp:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_polyval_bones.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/unistd.h:
@@ -3143,6 +3288,12 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_resize.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_clock_t.h:
+
+/opt/homebrew/include/H5FDmpi.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/limits.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/arm/arch.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/typedef_elem_check.hpp:
 
@@ -3155,6 +3306,10 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/resource.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/fstream:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_join_bones.hpp:
+
+/opt/homebrew/include/nlohmann/detail/iterators/iterator_traits.hpp:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/pstl/glue_memory_defs.h:
 
@@ -3172,6 +3327,8 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/quoted_string.h:
 
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/fs_fwd.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_locale.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_uintptr_t.h:
@@ -3184,6 +3341,12 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
 
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_chol_bones.hpp:
+
+/opt/homebrew/include/H5Tpublic.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_mach_port_t.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_u_int64_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_u_int32_t.h:
@@ -3192,13 +3355,21 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_u_int.h:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/injector_meat.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_timeval.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/allocated_ptr.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/BaseCube_bones.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtOpCube_meat.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_size_t.h:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/this_thread_sleep.h:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/spop_norm_bones.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/mask_array.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/eop_core_meat.hpp:
 
@@ -3206,19 +3377,13 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_rune_t.h:
 
-/opt/homebrew/include/H5FDsec2.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/backward/auto_ptr.h:
-
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/basic_ios.tcc:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/spdiagview_bones.hpp:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_atan2_meat.hpp:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_id_t.h:
+/usr/local/include/xdiag/states/product_state.hpp:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_pthread/_pthread_key_t.h:
-
-/opt/homebrew/include/H5FDonion.h:
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/auxlib_meat.hpp:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/enable_special_members.h:
 
@@ -3229,8 +3394,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_vectorise_meat.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_null.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/this_thread_sleep.h:
 
 /usr/local/include/xdiag/io/toml/file_toml_handler.hpp:
 
@@ -3249,8 +3412,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_cumsum_bones.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_intptr_t.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/gmm_misc_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_norm_bones.hpp:
 
@@ -3273,6 +3434,10 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_fsblkcnt_t.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_cumprod.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/cctype:
+
+/opt/homebrew/include/nlohmann/detail/string_escape.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_hist_bones.hpp:
 
@@ -3308,6 +3473,22 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/mach/machine/_structs.h:
 
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtGlue_bones.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_ino64_t.h:
+
+/opt/homebrew/include/nlohmann/detail/iterators/json_reverse_iterator.hpp:
+
+/opt/homebrew/include/nlohmann/thirdparty/hedley/hedley_undef.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_pthread/_pthread_key_t.h:
+
+/opt/homebrew/include/H5FDonion.h:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/spdiagview_bones.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_id_t.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_errno_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_dev_t.h:
@@ -3326,6 +3507,14 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types.h:
 
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/running_stat_vec_bones.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_sqrtmat_meat.hpp:
+
+/opt/homebrew/include/nlohmann/detail/hash.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/forward_list.tcc:
+
 /opt/homebrew/Cellar/gcc/14.2.0/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdint.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_fd_setsize.h:
@@ -3337,8 +3526,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_types/_uint32_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/arm/limits.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_stdio.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_symbol_aliasing.h:
 
@@ -3362,8 +3549,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_size.hpp:
 
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/exception.h:
-
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/eop_aux.hpp:
 
 /usr/local/include/xdiag/algorithms/sparse_diag.hpp:
@@ -3386,8 +3571,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/malloc/_ptrcheck.h:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_mvnrnd_meat.hpp:
-
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/concepts:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h:
@@ -3404,8 +3587,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/signal.h:
 
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/eOpCube_meat.hpp:
-
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/tr1/special_function_util.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_ctype.h:
@@ -3413,10 +3594,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/locale_facets_nonio.tcc:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_endian.h:
-
-/usr/local/include/xdiag/extern/gsl/assert:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/gmm_diag_meat.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/spglue_schur_bones.hpp:
 
@@ -3446,6 +3623,10 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_suseconds_t.h:
 
+/usr/local/include/xdiag/bits/extract_deposit.hpp:
+
+/opt/homebrew/include/H5FDmulti.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_types/_uint16_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
@@ -3456,19 +3637,19 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/memory_resource.h:
 
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_max_meat.hpp:
+
+/opt/homebrew/include/H5TSdevelop.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_fsfilcnt_t.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_cumsum_meat.hpp:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/sstream:
 
-/opt/homebrew/include/H5FDpublic.h:
-
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_speye.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/gethostuuid.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_quantile_bones.hpp:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/newarp_SparseGenRealShiftSolve_meat.hpp:
 
@@ -3488,6 +3669,10 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_rsize_t.h:
 
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/gmm_misc_meat.hpp:
+
+/opt/homebrew/include/nlohmann/detail/conversions/from_json.hpp:
+
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_shuffle_meat.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/arm/signal.h:
@@ -3498,15 +3683,7 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_pid_t.h:
 
-/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/cctype:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtOpCube_bones.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/arm/endian.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_sum_bones.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_fd_copy.h:
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/operator_cube_relational.hpp:
 
@@ -3516,6 +3693,8 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/def_atlas.hpp:
 
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/node_handle.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/pthread/qos.h:
@@ -3524,9 +3703,23 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_zeros.hpp:
 
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/op_princomp_bones.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/valarray_array.tcc:
+
 /usr/local/include/xdiag/extern/armadillo/armadillo_bits/subview_field_bones.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/malloc/_malloc.h:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/running_stat_bones.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/glue_join_meat.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/fn_approx_equal.hpp:
+
+/usr/local/include/xdiag/extern/armadillo/armadillo_bits/SpGlue_bones.hpp:
+
+/opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/valarray:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/aarch64-apple-darwin23/bits/gthr-default.h:
 
@@ -3545,8 +3738,6 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_types/_uintmax_t.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/pstl/pstl_config.h:
-
-/usr/local/include/xdiag/extern/armadillo/armadillo_bits/mtOp_meat.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/arm/_types.h:
 
@@ -3573,5 +3764,9 @@ CMakeFiles/pyro16.dir/pyro16.cpp.o: /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cp
 /usr/local/include/xdiag/algebra/apply.hpp:
 
 /opt/homebrew/Cellar/gcc/14.2.0/include/c++/14/bits/random.h:
+
+/opt/homebrew/include/H5Dpublic.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_va_list.h:
 
 /Users/alaricsanders/mygh/ED_DOQSI/pyro16.cpp:

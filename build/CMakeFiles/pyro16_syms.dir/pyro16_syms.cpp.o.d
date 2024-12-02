@@ -1112,6 +1112,7 @@ CMakeFiles/pyro16_syms.dir/pyro16_syms.cpp.o: \
  /usr/local/include/xdiag/operators/coupling.hpp \
  /usr/local/include/xdiag/states/state.hpp \
  /usr/local/include/xdiag/algebra/matrix.hpp \
+ /usr/local/include/xdiag/algorithms/lanczos/eigs_lanczos.hpp \
  /usr/local/include/xdiag/algorithms/lanczos/eigvals_lanczos.hpp \
  /usr/local/include/xdiag/all.hpp \
  /usr/local/include/xdiag/parallel/omp/omp_utils.hpp \
@@ -1143,7 +1144,6 @@ CMakeFiles/pyro16_syms.dir/pyro16_syms.cpp.o: \
  /usr/local/include/xdiag/operators/symmetrize.hpp \
  /usr/local/include/xdiag/algorithms/norm_estimate.hpp \
  /usr/local/include/xdiag/algorithms/sparse_diag.hpp \
- /usr/local/include/xdiag/algorithms/lanczos/eigs_lanczos.hpp \
  /usr/local/include/xdiag/algorithms/lanczos/lanczos.hpp \
  /usr/local/include/xdiag/algorithms/lanczos/lanczos_step.hpp \
  /usr/local/include/xdiag/algorithms/gram_schmidt/orthogonalize.hpp \
