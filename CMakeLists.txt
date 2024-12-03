@@ -2,10 +2,12 @@ cmake_minimum_required(VERSION 3.19)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(
-  hello_world
+    pyro_ED
 )
 
 find_package(xdiag REQUIRED)
+
+set(CMAKE_CXX_FLAGS "-Wall -Wpedantic -DDEBUG")
 
 # the tests
 add_executable(tfim tests/tfim.cpp)
@@ -23,5 +25,8 @@ add_executable(rationalmath tests/rationalmath.cpp)
 add_executable(pyro16 pyro16.cpp)
 target_link_libraries(pyro16 PRIVATE xdiag::xdiag)
 
-add_executable(pyro16_syms pyro16_syms.cpp)
-target_link_libraries(pyro16_syms PRIVATE xdiag::xdiag)
+#add_executable(pyro16_syms pyro16_syms.cpp)
+#target_link_libraries(pyro16_syms PRIVATE xdiag::xdiag)
+
+add_executable(ring_ED ring_ED.cpp)
+target_link_libraries(ring_ED PRIVATE xdiag::xdiag)

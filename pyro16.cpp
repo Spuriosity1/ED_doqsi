@@ -17,6 +17,7 @@
 #include <xdiag/operators/opsum.hpp>
 #include <xdiag/utils/say_hello.hpp>
 #include <nlohmann/json.hpp>
+#include <sstream>
 
 using namespace xdiag;
 using json = nlohmann::json;
@@ -188,39 +189,10 @@ inline arma::mat ring_flip(){
 	// This can be done efficiently
 	// This implementation is not that, it's pure horror
 	arma::mat O = arma::zeros(64, 64);
-	for (int psi=0; psi<64; psi++){
-		int res = psi;
-		double coeff=1; // this is 0 or 1
-						
-		for (int i=0; i<6; i++){
-			bool spin_i_up = ((res&(1<<i)) != 0);
-
-			if ( i%2 == 0 ){
-				// S+	
-				if (spin_i_up){
-					coeff=0;
-					break;
-				}
-				// flip they spin
-				res ^= (1<<i);
-			} else {
-				// S-
-				if (!spin_i_up) {
-					//spin is down, can't lower a spin
-					coeff=0;
-					break;
-				}
-				// flip they spin
-				res ^= (1<<i);
-			}
-		}
-		if (fabs(coeff) > 1e-4){
-			printf("%d | %2x -> %2x\n", psi, psi, res);
-			O(res, psi) = coeff;
-		}
-	}
-	// equivalent code: M(0b101010,0b010101)=1
+    O(0b101010, 0b010101) = 1;
+    //O(0b010101, 0b101010) = 1;
 	return O;
+
 
 }
 
@@ -277,6 +249,8 @@ int main(int argc, char** argv) try {
 	}
 	
 
+    std::stringstream label;
+    label << "%jpm=" << ops["Jpm"] << "%B=" << B[0]<<","<<B[1]<<","<<B[2];
 	/////////////////////////////////////////////
 	//// PERFORMING THE DIAGONALISATION (Lanczos)
 	///
@@ -284,7 +258,7 @@ int main(int argc, char** argv) try {
 	std::vector<string> statev = {"Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn"};
 	auto init_state = product(block, statev);
 	auto lanczos_res = eigs_lanczos(ops, block, 
-			init_state, 
+			//init_state, 
 			NSTATES,
 			/* precision */ 1e-14,
 			/* max iter */ 10000,
@@ -292,8 +266,6 @@ int main(int argc, char** argv) try {
 			);
 	cerr << "iter criterion -> "<< lanczos_res.criterion << endl;
 
-	auto gs = lanczos_res.eigenvectors.col(0);
-	gs.make_complex();
 
 	//////////////////////////////////////////
 	//// OUTPUT
@@ -308,12 +280,19 @@ int main(int argc, char** argv) try {
 	std::cout<<"SZ expectation values:\n";
 	std::cout<<"sublat\tX\tY\tZ\t<Sz>\n"; 
 
-	std::vector<double> Sz_list;
+	std::vector<arma::mat> Sz_list;
+
+
+	auto gs_set = lanczos_res.eigenvectors.cols(0,4);
 
 	for (int J=0; J<16; J++){
 		auto R1=pyro_sites[J];
 
-		arma::cx_double SZ = innerC(Op("SZ",1, J), gs);
+        OpSum Sz;
+        Sz += Op("SZ", 1, J);
+
+
+		arma::mat SZ = apply(SZ, gs_set);
 		printf("%d\t%+1lld\t%+1lld\t%+1lld\t%16.7e\n", 
 				J%4, R1[0],R1[1],R1[2], SZ.real());
 
@@ -332,32 +311,30 @@ int main(int argc, char** argv) try {
 
 	int sl=0;
 
-	std::vector<double> re_ringflip;
-	std::vector<double> im_ringflip;
+	std::vector<arma::cx_mat> ringflip;
 	std::vector<ivec3> plaq_sites;
 
 	for (auto& [R1, op] : hexa_list){
-		arma::cx_double exp_O = innerC(op, gs);
+		arma::cx_mat exp_O = innerC(op, gs);
 	
 		printf("%d\t%+1lld\t%+1lld\t%+1lld\t%16.7e\t%16.7e\n", 
 				sl, R1[0],R1[1],R1[2],
 				exp_O.real(), exp_O.imag());
-
-		re_ringflip.push_back(exp_O.real());
-		re_ringflip.push_back(exp_O.imag());
-		sl = (++sl)%4;
+		ringflip.push_back(exp_O);
+		sl = (sl + 1)%4;
 	}
 
 	out["lattice"]["plaq_sites"] = plaq_sites;
-	out["re_ringflip"] = re_ringflip;
-	out["im_ringflip"] = im_ringflip;
+	out["ringflip"] = ringflip;
 	out["Jpm"] = atof(argv[1])/2;
 	out["B"] = B;
 
 
 	// save to file
+    //
 	//
-	std::ofstream file("output/out_pyro16_"+getISOCurrentTimestamp()+".json");
+    //
+	std::ofstream file("output/out_pyro16_"+label.str()+".json");
     file << out;
 } catch (Error e) {
 	error_trace(e);

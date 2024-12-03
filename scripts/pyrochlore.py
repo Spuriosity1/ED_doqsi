@@ -54,11 +54,11 @@ plaq_locs = [Matrix(x) for x in
 
 def get_ringflips(lat: lattice.Lattice):
     retval = []
-    for mu, plaq_sl_pos in enumerate(plaq_locs):
-        for ix in range(lat.periodicity[0]):
-            for iy in range(lat.periodicity[1]):
-                for iz in range(lat.periodicity[2]):
-                    dx = lat.primitive.lattice_vectors @ Matrix([ix, iy, iz])
+    for ix in range(lat.periodicity[0]):
+        for iy in range(lat.periodicity[1]):
+            for iz in range(lat.periodicity[2]):
+                dx = lat.primitive.lattice_vectors @ Matrix([ix, iy, iz])
+                for mu, plaq_sl_pos in enumerate(plaq_locs):
                     plaq_pos = lat.wrap_coordinate(plaq_sl_pos + dx)
 
                     retval.append([lat.as_linear_idx(plaq_pos + x)
