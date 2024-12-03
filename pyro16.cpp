@@ -217,15 +217,107 @@ vector<std::pair<ivec3, Op>> get_hexa_list(){
 }
 
 
+arma::mat evaluate_gs_matrix(const OpSum& O, const std::vector<State>& gs_set){
+	arma::mat out(gs_set.size(), gs_set.size());	
+	for (int i=0; i<gs_set.size(); i++){
+		// the diagonal
+		out(i,i) = inner(O, gs_set[i]);
+		for (int j=0; j< i; j++){
+			auto w = gs_set[j];
+			apply(O, gs_set[j], w);
+			double val = dot(gs_set[i], w);
+			out(i,j) = val;
+			out(j,i) = val;
+		}
+	}
+	return out;
+}
+
+
+arma::cx_mat evaluate_gs_matrixC(const OpSum& O, const std::vector<State>& gs_set){
+	arma::cx_mat out(gs_set.size(), gs_set.size());	
+	for (int i=0; i<gs_set.size(); i++){
+		// the diagonal
+		out(i,i) = innerC(O, gs_set[i]);
+		for (int j=0; j< i; j++){
+			auto w = gs_set[j];
+			apply(O, gs_set[j], w);
+			xdiag::complex val = dotC(gs_set[i], w);
+			out(i,j) = val;
+			out(j,i) = val;
+		}
+	}
+	return out;
+}
+
+
+void evaluate_exp_Sz(const std::vector<State>& gs_set, json& out){
+	// Stores the gs_Set.size()^2-dim matrix <g1 | Sz | g2> for all sites
+	// in format [J] 
+	//
+	//
+	
+	std::cout<<"SZ expectation values:\n";
+	std::cout<<"sublat\tX\tY\tZ\t<Sz>\n"; 
+	
+	std::vector<arma::mat> Sz_list;
+	for (int J=0; J<16; J++){
+		auto R1=pyro_sites[J];
+
+        OpSum Sz({Op("SZ", 1, J)});
+
+		auto sz_mat = evaluate_gs_matrix(Sz,gs_set);
+		Sz_list.push_back(sz_mat);
+		std::cout << "Spin "<<J<<"<g|Sz|g> = \n"<<sz_mat<<"\n";
+	}
+	out["Sz"] = Sz_list;
+	out["lattice"]["spin_sites"] = pyro_sites;
+
+
+}
+
+void evaluate_ring_flip(const std::vector<State>& gs_set, json& out){
+	std::cout<<"Plaq expectation values:\n";
+	auto hexa_list = get_hexa_list();
+	std::cout<<"sublat\tX\tY\tZ\tRe<O>\tIm<O>\n"; 
+
+	int sl=0;
+
+	std::vector<arma::mat> re_ringflip;
+	std::vector<arma::mat> im_ringflip;
+	std::vector<ivec3> plaq_sites;
+
+	for (auto& [R1, op] : hexa_list){
+		arma::cx_mat exp_O = evaluate_gs_matrixC(OpSum({op}), gs_set);
+	
+		printf("%d\t%+1lld\t%+1lld\t%+1lld\n", 
+				sl, R1[0],R1[1],R1[2]);
+		std::cout << exp_O << "\n";
+		re_ringflip.push_back(real(exp_O));
+		im_ringflip.push_back(imag(exp_O));
+		plaq_sites.push_back(R1);
+		sl = (sl + 1)%4;
+	}
+
+	out["lattice"]["plaq_sites"] = plaq_sites;
+	out["re_ringflip"] = re_ringflip;
+	out["im_ringflip"] = im_ringflip;
+}
+
+
 int main(int argc, char** argv) try {
 	if (argc < 6){
-		cout <<"USAGE: "<<argv[0]<<" <Jpm/Jzz> <hx> <hy> <hz> <eig_number>\n";
+		cout <<"USAGE: "<<argv[0]<<" <Jpm/Jzz> <hx> <hy> <hz> <lanczos_dim> [num_kept_states = 4]\n";
 		return 1;
 	}
 
 	set_verbosity(1);// set verbosity for monitoring progress
 					 //
-	int NSTATES = atoi(argv[5]);
+	int lanczos_dim = atoi(argv[5]);
+
+
+	int num_kept_states = 4;
+	if (argc >= 7) num_kept_states = atoi(argv[6]);
 
 
 	OpSum ops;
@@ -259,10 +351,10 @@ int main(int argc, char** argv) try {
 	auto init_state = product(block, statev);
 	auto lanczos_res = eigs_lanczos(ops, block, 
 			//init_state, 
-			NSTATES,
+			lanczos_dim,
 			/* precision */ 1e-14,
 			/* max iter */ 10000,
-			/* force complex */ true
+			/* force complex */ false
 			);
 	cerr << "iter criterion -> "<< lanczos_res.criterion << endl;
 
@@ -273,59 +365,21 @@ int main(int argc, char** argv) try {
 	///
 	json out;
 	out["lattice"] = {};
+
 	out["energies"] = lanczos_res.eigenvalues;
 
 	std::cout<<"Energy values:\n"<<lanczos_res.eigenvalues<<std::endl;
 
-	std::cout<<"SZ expectation values:\n";
-	std::cout<<"sublat\tX\tY\tZ\t<Sz>\n"; 
-
-	std::vector<arma::mat> Sz_list;
 
 
-	auto gs_set = lanczos_res.eigenvectors.cols(0,4);
-
-	for (int J=0; J<16; J++){
-		auto R1=pyro_sites[J];
-
-        OpSum Sz;
-        Sz += Op("SZ", 1, J);
-
-
-		arma::mat SZ = apply(SZ, gs_set);
-		printf("%d\t%+1lld\t%+1lld\t%+1lld\t%16.7e\n", 
-				J%4, R1[0],R1[1],R1[2], SZ.real());
-
-		Sz_list.push_back(SZ.real());
-
+	std::vector<State> gs_set;
+	for (int i=0; i<num_kept_states; i++){
+		gs_set.push_back(lanczos_res.eigenvectors.col(i));
 	}
 
-	out["lattice"]["spin_sites"] = pyro_sites;
-	out["Sz"] = Sz_list;
+	evaluate_exp_Sz(gs_set, out);
+	evaluate_ring_flip(gs_set, out);
 
-
-
-	std::cout<<"Plaq expectation values:\n";
-	auto hexa_list = get_hexa_list();
-	std::cout<<"sublat\tX\tY\tZ\tRe<O>\tIm<O>\n"; 
-
-	int sl=0;
-
-	std::vector<arma::cx_mat> ringflip;
-	std::vector<ivec3> plaq_sites;
-
-	for (auto& [R1, op] : hexa_list){
-		arma::cx_mat exp_O = innerC(op, gs);
-	
-		printf("%d\t%+1lld\t%+1lld\t%+1lld\t%16.7e\t%16.7e\n", 
-				sl, R1[0],R1[1],R1[2],
-				exp_O.real(), exp_O.imag());
-		ringflip.push_back(exp_O);
-		sl = (sl + 1)%4;
-	}
-
-	out["lattice"]["plaq_sites"] = plaq_sites;
-	out["ringflip"] = ringflip;
 	out["Jpm"] = atof(argv[1])/2;
 	out["B"] = B;
 
