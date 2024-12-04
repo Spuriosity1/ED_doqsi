@@ -6,10 +6,13 @@
 #include <stdexcept>
 #include <utility>
 #include <vector>
+#include <xdiag/algebra/matrix.hpp>
 #include <xdiag/all.hpp>
 #include <armadillo>
 #include <nlohmann/json.hpp>
 #include <sstream>
+#include <xdiag/operators/symmetrize.hpp>
+#include <xdiag/symmetries/generated_group.hpp>
 #include "pyrochlore_geometry.hpp"
 
 using namespace xdiag;
@@ -93,6 +96,22 @@ void add_tetras(OpSum& ops, int sl){
 	}
 }
 
+
+std::vector<int> get_translation_symetries(const ivec3& dx) {
+	std::vector<int> res(16);
+	
+	for (const auto& R_fcc : FCC_pos){
+		for (int mu=0; mu<4; mu++){
+			auto R1 = R_fcc + pyro_pos[mu];
+			auto J1 = spin_idx(R1);
+			res[J1] = spin_idx(R1 + dx);
+		}
+	}
+	return res;
+}
+
+
+
 void add_magnetic_field(OpSum& ops){
 	for (const auto& R_fcc : FCC_pos){
 		for (int mu=0; mu<4; mu++){
@@ -120,8 +139,8 @@ inline arma::mat ring_flip(){
 vector<std::pair<ivec3, Op>> get_hexa_list(){
 	auto ring = ring_flip();
 	vector<std::pair<ivec3, Op>> retval;
-	for (const auto& R_dfcc : dual_FCC_pos){
-		for (int psl=0;psl<4;psl++){
+	for (int psl=0;psl<4;psl++){
+		for (const auto& R_dfcc : dual_FCC_pos){
 
 			auto R = R_dfcc + pyro_pos[psl];
 			vector<int64_t> hex_ind;
@@ -135,94 +154,6 @@ vector<std::pair<ivec3, Op>> get_hexa_list(){
 	}
 
 	return retval;
-}
-
-
-arma::mat evaluate_gs_matrix(const OpSum& O, const std::vector<State>& gs_set){
-	arma::mat out(gs_set.size(), gs_set.size());	
-	for (int i=0; i<gs_set.size(); i++){
-		// the diagonal
-		out(i,i) = inner(O, gs_set[i]);
-		for (int j=0; j< i; j++){
-			auto w = gs_set[j];
-			apply(O, gs_set[j], w);
-			double val = dot(gs_set[i], w);
-			out(i,j) = val;
-			out(j,i) = val;
-		}
-	}
-	return out;
-}
-
-
-arma::cx_mat evaluate_gs_matrixC(const OpSum& O, const std::vector<State>& gs_set){
-	arma::cx_mat out(gs_set.size(), gs_set.size());	
-	for (int i=0; i<gs_set.size(); i++){
-		// the diagonal
-		out(i,i) = innerC(O, gs_set[i]);
-		for (int j=0; j< i; j++){
-			auto w = gs_set[j];
-			apply(O, gs_set[j], w);
-			xdiag::complex val = dotC(gs_set[i], w);
-			out(i,j) = val;
-			out(j,i) = val;
-		}
-	}
-	return out;
-}
-
-
-void evaluate_exp_Sz(const std::vector<State>& gs_set, json& out){
-	// Stores the gs_Set.size()^2-dim matrix <g1 | Sz | g2> for all sites
-	// in format [J] 
-	//
-	//
-	
-	std::cout<<"SZ expectation values:\n";
-	std::cout<<"sublat\tX\tY\tZ\t<Sz>\n"; 
-	
-	std::vector<arma::mat> Sz_list;
-	for (int J=0; J<16; J++){
-		auto R1=pyro16_sites[J];
-
-        OpSum Sz({Op("SZ", 1, J)});
-
-		auto sz_mat = evaluate_gs_matrix(Sz,gs_set);
-		Sz_list.push_back(sz_mat);
-		std::cout << "Spin "<<J<<"<g|Sz|g> = \n"<<sz_mat<<"\n";
-	}
-	out["Sz"] = Sz_list;
-	out["lattice"]["spin_sites"] = pyro16_sites;
-
-
-}
-
-void evaluate_ring_flip(const std::vector<State>& gs_set, json& out){
-	std::cout<<"Plaq expectation values:\n";
-	auto hexa_list = get_hexa_list();
-	std::cout<<"sublat\tX\tY\tZ\tRe<O>\tIm<O>\n"; 
-
-	int sl=0;
-
-	std::vector<arma::mat> re_ringflip;
-	std::vector<arma::mat> im_ringflip;
-	std::vector<ivec3> plaq_sites;
-
-	for (auto& [R1, op] : hexa_list){
-		arma::cx_mat exp_O = evaluate_gs_matrixC(OpSum({op}), gs_set);
-	
-		printf("%d\t%+1lld\t%+1lld\t%+1lld\n", 
-				sl, R1[0],R1[1],R1[2]);
-		std::cout << exp_O << "\n";
-		re_ringflip.push_back(real(exp_O));
-		im_ringflip.push_back(imag(exp_O));
-		plaq_sites.push_back(R1);
-		sl = (sl + 1)%4;
-	}
-
-	out["lattice"]["plaq_sites"] = plaq_sites;
-	out["re_ringflip"] = re_ringflip;
-	out["im_ringflip"] = im_ringflip;
 }
 
 
@@ -263,13 +194,56 @@ int main(int argc, char** argv) try {
     std::stringstream label;
     label << "%jpm=" << ops["Jpm"] << "%B=" << B[0]<<","<<B[1]<<","<<B[2];
 	/////////////////////////////////////////////
-	//// PERFORMING THE DIAGONALISATION (Lanczos)
-	///
-	auto block = Spinhalf(16);
+	//// PERFORMING THE DIAGONALISATION 
+	// k=space symmetries
+	//
 
-    auto H = matrix(ops, block);
-    arma::vec eigval;
-    arma::eig_sym(eigval, H);
+	std::vector<int> T1 = get_translation_symetries({4,4,0});
+	std::vector<int> T2 = get_translation_symetries({0,4,4});
+	Permutation p1 (T1);
+	Permutation p2 (T2);
+	auto g = generated_group({p1, p2});
+	// tere be four irreps of this 
+	std::vector<Representation> irreps = {
+		generated_irrep({p1,p2}, {1,1}),
+		generated_irrep({p1,p2}, {1,-1}),
+		generated_irrep({p1,p2}, {-1,1}),
+		generated_irrep({p1,p2}, {-1,-1})
+	};
+
+	std::vector<arma::vec> spec_list; // container for the energies
+	std::vector<std::vector<arma::mat>> ringflip_list; // container for the RF evals
+	auto hexas = get_hexa_list();
+
+	std::vector<OpSum> symmetrised_hexas;
+	for (int mu=0; mu<4; mu++){
+		symmetrised_hexas[mu] = xdiag::symmetrize(hexas[mu].second, g);
+	}
+	for (int q=0; q<4; q++){
+		 Log("Dynamical Lanczos iterations for q={}", q);
+
+		auto block = Spinhalf(16, g, irreps[q]);
+
+		auto H = matrix(ops, block);
+		arma::vec eigval;
+		arma::mat eigvec;
+		arma::eig_sym(eigval, eigvec, H);
+
+		arma::mat chosen_eigvec = eigvec.cols(0,num_kept_states);
+
+		std::cout<<"Energy values:\n"<<eigval<<std::endl;
+		std::cout << "Ringflip in energy basis: \n";
+
+		std::vector<arma::mat> ringflip_mats;
+		for (unsigned mu=0; mu<4; mu++){
+			std::cout << "mu = " << mu <<"\n";
+			auto O_op = matrix(symmetrised_hexas[mu], block);
+			arma::mat rf_energy_basis = chosen_eigvec.t() * O_op * chosen_eigvec;
+			ringflip_mats.push_back(rf_energy_basis);
+		}	
+		spec_list.push_back(eigval);
+		ringflip_list.push_back(ringflip_mats);
+	}
 
 	//////////////////////////////////////////
 	//// OUTPUT
@@ -278,27 +252,18 @@ int main(int argc, char** argv) try {
 	json out;
 	out["lattice"] = {};
 
-	out["energies"] = eigval;
+	out["energies"] = {};
+	out["energies"]["1,1"] = spec_list[0];
+	out["energies"]["1,-1"] = spec_list[1];
+	out["energies"]["-1,1"] = spec_list[2];
+	out["energies"]["-1,-1"] = spec_list[3];
 
-	std::cout<<"Energy values:\n"<<eigval<<std::endl;
-
-
-/*
-	std::vector<State> gs_set;
-	for (int i=0; i<num_kept_states; i++){
-		gs_set.push_back(lanczos_res.eigenvectors.col(i));
-	}
-
-	evaluate_exp_Sz(gs_set, out);
-	evaluate_ring_flip(gs_set, out);
+	out["ringflip"]["1,1"] =   ringflip_list[0];
+	out["ringflip"]["1,-1"] =  ringflip_list[1];
+	out["ringflip"]["-1,1"] =  ringflip_list[2];
+	out["ringflip"]["-1,-1"] = ringflip_list[3];
 
 
-
-	// save to file
-    //
-	//
-    //
-    */
 
 	out["Jpm"] = atof(argv[1]);
 	out["B"] = B;
