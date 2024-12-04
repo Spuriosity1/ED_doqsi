@@ -1,26 +1,34 @@
 #include <cmath>
-#include <complex>
+#include <chrono>
 #include <cstdint>
 #include <iostream>
+#include <nlohmann/json_fwd.hpp>
 #include <ostream>
-#include <sstream>
 #include <stdexcept>
 #include <utility>
 #include <vector>
 #include <xdiag/algebra/algebra.hpp>
 #include <xdiag/algebra/matrix.hpp>
-#include <xdiag/algorithms/lanczos/eigs_lanczos.hpp>
-#include <xdiag/algorithms/lanczos/eigvals_lanczos.hpp>
 #include <xdiag/all.hpp>
 #include <armadillo>
 #include <xdiag/blocks/spinhalf.hpp>
 #include <xdiag/common.hpp>
 #include <xdiag/operators/opsum.hpp>
-#include <xdiag/symmetries/permutation.hpp>
 #include <xdiag/utils/say_hello.hpp>
+#include <nlohmann/json.hpp>
+#include <sstream>
 
 using namespace xdiag;
+using json = nlohmann::json;
 
+std::string getISOCurrentTimestamp()
+{
+	time_t now;
+    time(&now);
+    char buf[sizeof "2011-10-08T07:07:09Z"];
+    strftime(buf, sizeof buf, "%FT%TZ", gmtime(&now));
+	return std::string(buf);
+}
 
 // the Paulis
 static const arma::mat sigma_x("0 1; 1 0");
@@ -180,39 +188,10 @@ inline arma::mat ring_flip(){
 	// This can be done efficiently
 	// This implementation is not that, it's pure horror
 	arma::mat O = arma::zeros(64, 64);
-	for (int psi=0; psi<64; psi++){
-		int res = psi;
-		double coeff=1; // this is 0 or 1
-						
-		for (int i=0; i<6; i++){
-			bool spin_i_up = ((res&(1<<i)) != 0);
-
-			if ( i%2 == 0 ){
-				// S+	
-				if (spin_i_up){
-					coeff=0;
-					break;
-				}
-				// flip they spin
-				res ^= (1<<i);
-			} else {
-				// S-
-				if (!spin_i_up) {
-					//spin is down, can't lower a spin
-					coeff=0;
-					break;
-				}
-				// flip they spin
-				res ^= (1<<i);
-			}
-		}
-		if (fabs(coeff) > 1e-4){
-			printf("%d | %2x -> %2x\n", psi, psi, res);
-			O(res, psi) = coeff;
-		}
-	}
-	// equivalent code: M(0b101010,0b010101)=1
+    O(0b101010, 0b010101) = 1;
+    //O(0b010101, 0b101010) = 1;
 	return O;
+
 
 }
 
@@ -236,47 +215,106 @@ vector<std::pair<ivec3, Op>> get_hexa_list(){
 	return retval;
 }
 
-std::vector<int> calc_perm_of_tl(ivec3 tl){
-	std::vector<int> l;
-	l.resize(16);
-	std::set<int> used_idx; // keep track to make sure it's actually a perm
-	for (int J=0; J<16; J++){
 
-		int shift_J = spin_idx(pyro_sites[J]+tl);
-		auto [it, success] = used_idx.insert(shift_J);
-		if (!success){
-			stringstream ss;
-			ss << "Permutation is not a permutation:";
-			ss << "Site "<<J<<" @ "<< 
-				pyro_sites[J][0]<<" "<<pyro_sites[J][1]<<" "<<pyro_sites[J][2]
-				<<" is mapped to idx "<<shift_J;
-			throw std::logic_error(ss.str());
+arma::mat evaluate_gs_matrix(const OpSum& O, const std::vector<State>& gs_set){
+	arma::mat out(gs_set.size(), gs_set.size());	
+	for (int i=0; i<gs_set.size(); i++){
+		// the diagonal
+		out(i,i) = inner(O, gs_set[i]);
+		for (int j=0; j< i; j++){
+			auto w = gs_set[j];
+			apply(O, gs_set[j], w);
+			double val = dot(gs_set[i], w);
+			out(i,j) = val;
+			out(j,i) = val;
 		}
-		l[J] = shift_J;
 	}
-	return l;
+	return out;
 }
 
-std::vector<Permutation> calc_symmetries(){	
-	std::vector<Permutation> syms;
-	for (int i=1; i<4; i++){
-		syms.push_back(
-				Permutation(calc_perm_of_tl(FCC_pos[i]))
-				);
+
+arma::cx_mat evaluate_gs_matrixC(const OpSum& O, const std::vector<State>& gs_set){
+	arma::cx_mat out(gs_set.size(), gs_set.size());	
+	for (int i=0; i<gs_set.size(); i++){
+		// the diagonal
+		out(i,i) = innerC(O, gs_set[i]);
+		for (int j=0; j< i; j++){
+			auto w = gs_set[j];
+			apply(O, gs_set[j], w);
+			xdiag::complex val = dotC(gs_set[i], w);
+			out(i,j) = val;
+			out(j,i) = val;
+		}
 	}
-	return syms;
+	return out;
+}
+
+
+void evaluate_exp_Sz(const std::vector<State>& gs_set, json& out){
+	// Stores the gs_Set.size()^2-dim matrix <g1 | Sz | g2> for all sites
+	// in format [J] 
+	//
+	//
+	
+	std::cout<<"SZ expectation values:\n";
+	std::cout<<"sublat\tX\tY\tZ\t<Sz>\n"; 
+	
+	std::vector<arma::mat> Sz_list;
+	for (int J=0; J<16; J++){
+		auto R1=pyro_sites[J];
+
+        OpSum Sz({Op("SZ", 1, J)});
+
+		auto sz_mat = evaluate_gs_matrix(Sz,gs_set);
+		Sz_list.push_back(sz_mat);
+		std::cout << "Spin "<<J<<"<g|Sz|g> = \n"<<sz_mat<<"\n";
+	}
+	out["Sz"] = Sz_list;
+	out["lattice"]["spin_sites"] = pyro_sites;
+
+
+}
+
+void evaluate_ring_flip(const std::vector<State>& gs_set, json& out){
+	std::cout<<"Plaq expectation values:\n";
+	auto hexa_list = get_hexa_list();
+	std::cout<<"sublat\tX\tY\tZ\tRe<O>\tIm<O>\n"; 
+
+	int sl=0;
+
+	std::vector<arma::mat> re_ringflip;
+	std::vector<arma::mat> im_ringflip;
+	std::vector<ivec3> plaq_sites;
+
+	for (auto& [R1, op] : hexa_list){
+		arma::cx_mat exp_O = evaluate_gs_matrixC(OpSum({op}), gs_set);
+	
+		printf("%d\t%+1lld\t%+1lld\t%+1lld\n", 
+				sl, R1[0],R1[1],R1[2]);
+		std::cout << exp_O << "\n";
+		re_ringflip.push_back(real(exp_O));
+		im_ringflip.push_back(imag(exp_O));
+		plaq_sites.push_back(R1);
+		sl = (sl + 1)%4;
+	}
+
+	out["lattice"]["plaq_sites"] = plaq_sites;
+	out["re_ringflip"] = re_ringflip;
+	out["im_ringflip"] = im_ringflip;
 }
 
 
 int main(int argc, char** argv) try {
-	if (argc < 6){
-		cout <<"USAGE: "<<argv[0]<<" <Jpm/Jzz> <hx> <hy> <hz> <eig_number>\n";
+	if (argc < 5){
+		cout <<"USAGE: "<<argv[0]<<" <Jpm/Jzz> <hx> <hy> <hz> [num_kept_states = 4]\n";
 		return 1;
 	}
 
 	set_verbosity(1);// set verbosity for monitoring progress
 					 //
-	int NSTATES = atoi(argv[5]);
+
+	int num_kept_states = 4;
+	if (argc >= 6) num_kept_states = atoi(argv[5]);
 
 
 	OpSum ops;
@@ -291,79 +329,60 @@ int main(int argc, char** argv) try {
 	add_magnetic_field(ops);
 	
 	ops["Jzz"] = 1.;
-	ops["Jpm"] = atof(argv[1])/2;
+	ops["Jpm"] = atof(argv[1]);
 		
 	arma::vec3 B = {atof(argv[2]), atof(argv[3]), atof(argv[4])};
 	for (int mu=0; mu<4; mu++){
 		ops[field_proj_label[mu]] = (double) arma::dot(B,pyro_pos[mu])/sqrt(3);
 		cout << "B.e_mu "<<mu<<" "<<ops[field_proj_label[mu]]<<"\n";
 	}
-
-	// CALCULATING SYMMETRIES
-	auto syms = calc_symmetries();
-	auto permgroup = PermutationGroup(syms);
 	
 
+    std::stringstream label;
+    label << "%jpm=" << ops["Jpm"] << "%B=" << B[0]<<","<<B[1]<<","<<B[2];
 	/////////////////////////////////////////////
 	//// PERFORMING THE DIAGONALISATION (Lanczos)
 	///
-	auto block = Spinhalf(16);
+	auto block = Spinhalf(16, 8);
 
-	auto lanczos_res = eigs_lanczos(ops, block, 
-			NSTATES,
-			/* precision */ 1e-14,
-			/* max iter */ 10000,
-			/* force complex */ true
-			);
-	cerr << "iter criterion -> "<< lanczos_res.criterion << endl;
+    auto H = matrix(ops, block);
+    arma::vec eigval;
+    arma::eig_sym(eigval, H);
 
-	auto gs = lanczos_res.eigenvectors.col(0);
-	gs.make_complex();
-
-
-	std::vector<eigs_lanczos_result_t> block_results;
-
-	for (const auto& [k, irrep] : irreps){
-		auto block = Spinhalf(16, permgroup, irrep);
-		auto lanczos_res = eigvals_lanczos(ops, block, 4); // compute ground state energy
-		cerr << "k = " << k << ", iter criterion -> " <<  lanczos_res.criterion << endl;
-		eigvals.push_back(lanczos_res);
-	}
-	
 	//////////////////////////////////////////
 	//// OUTPUT
 	///
+	///
+	json out;
+	out["lattice"] = {};
 
-	std::cout<<"Energy values:\n"<<lanczos_res.eigenvalues<<std::endl;
+	out["energies"] = eigval;
 
-	std::cout<<"SZ expectation values:\n";
-	std::cout<<"sublat\tX\tY\tZ\t<Sz>\n"; 
+	std::cout<<"Energy values:\n"<<eigval<<std::endl;
 
-	for (int J=0; J<16; J++){
-		auto R1=pyro_sites[J];
 
-		arma::cx_double SZ = innerC(Op("SZ",1, J), gs);
-		printf("%d\t%+1lld\t%+1lld\t%+1lld\t%16.7e\n", 
-				J%4, R1[0],R1[1],R1[2], SZ.real());
-	}
-	std::cout<<"Plaq expectation values:\n";
-	auto hexa_list = get_hexa_list();
-	std::cout<<"sublat\tX\tY\tZ\tRe<O>\tIm<O>\n"; 
-
-	int sl=0;
-	for (auto& [R1, op] : hexa_list){
-		arma::cx_double exp_O = innerC(op, gs);
-	
-		printf("%d\t%+1lld\t%+1lld\t%+1lld\t%16.7e\t%16.7e\n", 
-				sl, R1[0],R1[1],R1[2],
-				exp_O.real(), exp_O.imag());
-
-		sl = (++sl)%4;
+/*
+	std::vector<State> gs_set;
+	for (int i=0; i<num_kept_states; i++){
+		gs_set.push_back(lanczos_res.eigenvectors.col(i));
 	}
 
+	evaluate_exp_Sz(gs_set, out);
+	evaluate_ring_flip(gs_set, out);
 
-	
 
+
+	// save to file
+    //
+	//
+    //
+    */
+
+	out["Jpm"] = atof(argv[1]);
+	out["B"] = B;
+
+	std::ofstream file("output/out_pyro16_full_"+label.str()+".json");
+    file << out;
 } catch (Error e) {
 	error_trace(e);
 }

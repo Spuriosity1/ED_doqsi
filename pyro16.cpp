@@ -6,21 +6,16 @@
 #include <ostream>
 #include <stdexcept>
 #include <utility>
-#include <vector>
-#include <xdiag/algebra/algebra.hpp>
-#include <xdiag/algebra/matrix.hpp>
-#include <xdiag/algorithms/lanczos/eigvals_lanczos.hpp>
 #include <xdiag/all.hpp>
-#include <armadillo>
-#include <xdiag/blocks/spinhalf.hpp>
-#include <xdiag/common.hpp>
-#include <xdiag/operators/opsum.hpp>
-#include <xdiag/utils/say_hello.hpp>
 #include <nlohmann/json.hpp>
 #include <sstream>
+#include "pyrochlore_geometry.hpp"
 
 using namespace xdiag;
 using json = nlohmann::json;
+using namespace pyro;
+using namespace std;
+using ivec3=arma::ivec3;
 
 std::string getISOCurrentTimestamp()
 {
@@ -36,81 +31,6 @@ static const arma::mat sigma_x("0 1; 1 0");
 static const arma::cx_mat sigma_y(arma::mat("0 0; 0 0"), arma::mat("0 -1; 1 0"));
 static const arma::mat sigma_z("1 0; 0 -1");
 
-
-using namespace std;
-using ivec3=arma::ivec3;
-
-const static vector<ivec3> FCC_pos = {
-	{0,0,0},
-	{0,4,4},
-	{4,0,4},
-	{4,4,0}
-};
-
-const static vector<ivec3> dual_FCC_pos = {
-	{4,4,4},
-	{4,0,0},
-	{0,4,0},
-	{0,0,4}
-};
-
-const static vector<ivec3> pyro_pos = {
-	{1,1,1},
-	{1,-1,-1},
-	{-1,1,-1},
-	{-1,-1,1}
-};
-
-const ivec3 plaqt[4][6] = {
-    {
-	{ 0,-2, 2},
-	{ 2,-2, 0},
-	{ 2, 0,-2},
-	{ 0, 2,-2},
-	{-2, 2, 0},
-	{-2, 0, 2}},
-    {
-	{ 0, 2,-2},
-	{ 2, 2, 0},
-	{ 2, 0, 2},
-	{ 0,-2, 2},
-	{-2,-2, 0},
-	{-2, 0,-2}},
-    {
-	{ 0,-2,-2},
-	{-2,-2, 0},
-	{-2, 0, 2},
-	{ 0, 2, 2},
-	{ 2, 2, 0},
-	{ 2, 0,-2}},
-    {
-	{ 0, 2, 2},
-	{-2, 2, 0},
-	{-2, 0,-2},
-	{ 0,-2,-2},
-	{ 2,-2, 0},
-	{ 2, 0, 2}}
-};
-
-
-const static vector<ivec3> pyro_sites = {
-{1,1,1},
-{1,7,7},
-{7,1,7},
-{7,7,1},
-{1,5,5},
-{1,3,3},
-{7,5,3},
-{7,3,5},
-{5,1,5},
-{5,7,3},
-{3,1,3},
-{3,7,5},
-{5,5,1},
-{5,3,7},
-{3,5,7},
-{3,3,1}
-};
 
 
 ivec3 wrap(const ivec3& x){
@@ -332,7 +252,7 @@ int main(int argc, char** argv) try {
 	add_magnetic_field(ops);
 	
 	ops["Jzz"] = 1.;
-	ops["Jpm"] = atof(argv[1])/2;
+	ops["Jpm"] = atof(argv[1]);
 		
 	arma::vec3 B = {atof(argv[2]), atof(argv[3]), atof(argv[4])};
 	for (int mu=0; mu<4; mu++){
@@ -350,7 +270,7 @@ int main(int argc, char** argv) try {
 	std::vector<string> statev = {"Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn"};
 	auto init_state = product(block, statev);
 	auto lanczos_res = eigs_lanczos(ops, block, 
-			//init_state, 
+			init_state, 
 			lanczos_dim,
 			/* precision */ 1e-14,
 			/* max iter */ 10000,
@@ -380,7 +300,7 @@ int main(int argc, char** argv) try {
 	evaluate_exp_Sz(gs_set, out);
 	evaluate_ring_flip(gs_set, out);
 
-	out["Jpm"] = atof(argv[1])/2;
+	out["Jpm"] = atof(argv[1]);
 	out["B"] = B;
 
 

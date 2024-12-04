@@ -11,6 +11,20 @@
 #include <nlohmann/json.hpp>
 #include <sstream>
 
+/* CONVENTIONS
+ *
+ * H = \sum J_zz sigma^z sigma^z + J_\pm (\sigma^+ \sigma^- + \sigma^- \sigma^+)
+ * with local matrix rep 
+ *
+ * szsz |11> = 1/4 |11>
+ * szsz |00> = 1/4 |00>
+ * szsz |10> = -1/4 |10>
+ * szsz |01> = -1/4 |01>
+ *
+ *
+ */
+
+
 using namespace xdiag;
 using json = nlohmann::json;
 
@@ -80,7 +94,7 @@ int main(int argc, char** argv) try {
     }
 	
 	ops["Jzz"] = 1.;
-	ops["Jpm"] = atof(argv[1])/2;
+	ops["Jpm"] = atof(argv[1]);
 		
 	arma::vec3 B = {atof(argv[2]), atof(argv[3]), atof(argv[4])};
 	for (int mu=0; mu<4; mu++){
@@ -105,20 +119,31 @@ int main(int argc, char** argv) try {
     // evaluating ringflip expect value
     arma::cx_mat ringflip(64,64);
     ringflip(0b101010, 0b010101) = 1;
-//    ringflip(0b010101, 0b101010) = 1;
+    ringflip(0b010101, 0b101010) = 1;
     
     std::cout << "Eigvals: \n";
     eigval.rows(0,n_eigvals).print();
     std::cout << "Ringflip in energy basis: \n";
-/*
+
     arma::cx_mat U_reduced = U.cols(0,n_eigvals);
 
-    auto ringflip_energy_basis = U_reduced.t() * ringflip * U_reduced;
+    arma::cx_mat ringflip_energy_basis = U_reduced.t() * ringflip * U_reduced;
     ringflip_energy_basis.print();
-*/
+
+    json out;
+    out["Jpm"] = atof(argv[1]);
+	out["B"] = B;
+
+    out["energies"] = eigval.rows(0,n_eigvals);
+    arma::mat ring_real = real(ringflip_energy_basis);
+    out["ringflip"] = ring_real;
+
+
+    std::ofstream of("output/out_ringED_"+label.str()+".json");
+    of << out;
 
     return EXIT_SUCCESS;
 
-} catch (Error e) {
+} catch (Error& e) {
 	error_trace(e);
 }
