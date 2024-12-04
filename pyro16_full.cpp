@@ -215,10 +215,11 @@ int main(int argc, char** argv) try {
 	std::vector<std::vector<arma::mat>> ringflip_list; // container for the RF evals
 	auto hexas = get_hexa_list();
 
-	std::vector<OpSum> symmetrised_hexas;
-	for (int mu=0; mu<4; mu++){
-		symmetrised_hexas[mu] = xdiag::symmetrize(hexas[mu].second, g);
-	}
+	OpSum symmetrised_hexas_0 = xdiag::symmetrize(hexas[0].second, g);
+	OpSum symmetrised_hexas_1 = xdiag::symmetrize(hexas[1].second, g);
+	OpSum symmetrised_hexas_2 = xdiag::symmetrize(hexas[2].second, g);
+	OpSum symmetrised_hexas_3 = xdiag::symmetrize(hexas[3].second, g);
+	
 	for (int q=0; q<4; q++){
 		 Log("Dynamical Lanczos iterations for q={}", q);
 
@@ -229,18 +230,19 @@ int main(int argc, char** argv) try {
 		arma::mat eigvec;
 		arma::eig_sym(eigval, eigvec, H);
 
-		arma::mat chosen_eigvec = eigvec.cols(0,num_kept_states);
+		arma::mat U = eigvec.cols(0,num_kept_states);
 
 		std::cout<<"Energy values:\n"<<eigval<<std::endl;
 		std::cout << "Ringflip in energy basis: \n";
 
 		std::vector<arma::mat> ringflip_mats;
-		for (unsigned mu=0; mu<4; mu++){
-			std::cout << "mu = " << mu <<"\n";
-			auto O_op = matrix(symmetrised_hexas[mu], block);
-			arma::mat rf_energy_basis = chosen_eigvec.t() * O_op * chosen_eigvec;
-			ringflip_mats.push_back(rf_energy_basis);
-		}	
+		ringflip_mats.push_back(U.t() * matrix(symmetrised_hexas_0, block) * U);
+		ringflip_mats.push_back(U.t() * matrix(symmetrised_hexas_1, block) * U);
+		ringflip_mats.push_back(U.t() * matrix(symmetrised_hexas_2, block) * U);
+		ringflip_mats.push_back(U.t() * matrix(symmetrised_hexas_3, block) * U);
+
+
+		
 		spec_list.push_back(eigval);
 		ringflip_list.push_back(ringflip_mats);
 	}
