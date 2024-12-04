@@ -28,6 +28,9 @@ target_link_libraries(pyro16 PRIVATE xdiag::xdiag)
 add_executable(cluster12 cluster12.cpp)
 target_link_libraries(cluster12 PRIVATE xdiag::xdiag)
 
+add_executable(cluster12_full cluster12_full.cpp)
+target_link_libraries(cluster12_full PRIVATE xdiag::xdiag)
+
 add_executable(pyro16_full pyro16_full.cpp)
 target_link_libraries(pyro16_full PRIVATE xdiag::xdiag)
 

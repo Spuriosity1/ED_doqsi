@@ -1,5 +1,4 @@
 #include <cmath>
-#include <chrono>
 #include <cstdint>
 #include <iostream>
 #include <nlohmann/json_fwd.hpp>
@@ -7,19 +6,15 @@
 #include <stdexcept>
 #include <utility>
 #include <vector>
-#include <xdiag/algebra/algebra.hpp>
-#include <xdiag/algebra/matrix.hpp>
 #include <xdiag/all.hpp>
 #include <armadillo>
-#include <xdiag/blocks/spinhalf.hpp>
-#include <xdiag/common.hpp>
-#include <xdiag/operators/opsum.hpp>
-#include <xdiag/utils/say_hello.hpp>
 #include <nlohmann/json.hpp>
 #include <sstream>
+#include "pyrochlore_geometry.hpp"
 
 using namespace xdiag;
 using json = nlohmann::json;
+using namespace pyro;
 
 std::string getISOCurrentTimestamp()
 {
@@ -38,79 +33,6 @@ static const arma::mat sigma_z("1 0; 0 -1");
 
 using namespace std;
 using ivec3=arma::ivec3;
-
-const static vector<ivec3> FCC_pos = {
-	{0,0,0},
-	{0,4,4},
-	{4,0,4},
-	{4,4,0}
-};
-
-const static vector<ivec3> dual_FCC_pos = {
-	{4,4,4},
-	{4,0,0},
-	{0,4,0},
-	{0,0,4}
-};
-
-const static vector<ivec3> pyro_pos = {
-	{1,1,1},
-	{1,-1,-1},
-	{-1,1,-1},
-	{-1,-1,1}
-};
-
-const ivec3 plaqt[4][6] = {
-    {
-	{ 0,-2, 2},
-	{ 2,-2, 0},
-	{ 2, 0,-2},
-	{ 0, 2,-2},
-	{-2, 2, 0},
-	{-2, 0, 2}},
-    {
-	{ 0, 2,-2},
-	{ 2, 2, 0},
-	{ 2, 0, 2},
-	{ 0,-2, 2},
-	{-2,-2, 0},
-	{-2, 0,-2}},
-    {
-	{ 0,-2,-2},
-	{-2,-2, 0},
-	{-2, 0, 2},
-	{ 0, 2, 2},
-	{ 2, 2, 0},
-	{ 2, 0,-2}},
-    {
-	{ 0, 2, 2},
-	{-2, 2, 0},
-	{-2, 0,-2},
-	{ 0,-2,-2},
-	{ 2,-2, 0},
-	{ 2, 0, 2}}
-};
-
-
-const static vector<ivec3> pyro_sites = {
-{1,1,1},
-{1,7,7},
-{7,1,7},
-{7,7,1},
-{1,5,5},
-{1,3,3},
-{7,5,3},
-{7,3,5},
-{5,1,5},
-{5,7,3},
-{3,1,3},
-{3,7,5},
-{5,5,1},
-{5,3,7},
-{3,5,7},
-{3,3,1}
-};
-
 
 ivec3 wrap(const ivec3& x){
 	ivec3 y(x);
@@ -133,8 +55,8 @@ inline vector<ivec3> calc_pyro_sites(){
 
 int spin_idx(const ivec3& R_){
 	auto R = wrap(R_);
-	for (int i=0; i<pyro_sites.size(); i++){
-		if (arma::all(R == pyro_sites[i])) {return i;}
+	for (int i=0; i<pyro16_sites.size(); i++){
+		if (arma::all(R == pyro16_sites[i])) {return i;}
 	}
 	throw logic_error("Indexed illegal site");
 }
@@ -261,7 +183,7 @@ void evaluate_exp_Sz(const std::vector<State>& gs_set, json& out){
 	
 	std::vector<arma::mat> Sz_list;
 	for (int J=0; J<16; J++){
-		auto R1=pyro_sites[J];
+		auto R1=pyro16_sites[J];
 
         OpSum Sz({Op("SZ", 1, J)});
 
@@ -270,7 +192,7 @@ void evaluate_exp_Sz(const std::vector<State>& gs_set, json& out){
 		std::cout << "Spin "<<J<<"<g|Sz|g> = \n"<<sz_mat<<"\n";
 	}
 	out["Sz"] = Sz_list;
-	out["lattice"]["spin_sites"] = pyro_sites;
+	out["lattice"]["spin_sites"] = pyro16_sites;
 
 
 }
@@ -343,7 +265,7 @@ int main(int argc, char** argv) try {
 	/////////////////////////////////////////////
 	//// PERFORMING THE DIAGONALISATION (Lanczos)
 	///
-	auto block = Spinhalf(16, 8);
+	auto block = Spinhalf(16);
 
     auto H = matrix(ops, block);
     arma::vec eigval;

@@ -98,19 +98,18 @@ inline arma::mat ring_flip(){
 
 
 int main(int argc, char** argv) try {
-	if (argc < 7){
-		cout <<"USAGE: "<<argv[0]<<" <outdir> <Jpm/Jzz> <hx> <hy> <hz> <lanczos_dim> [num_kept_states = 4]\n";
+	if (argc < 6){
+		cout <<"USAGE: "<<argv[0]<<" <outdir> <Jpm/Jzz> <hx> <hy> <hz> [num_kept_states = 4]\n";
 		return 1;
 	}
 
 	set_verbosity(1);// set verbosity for monitoring progress
 					 //
-	int lanczos_dim = atoi(argv[6]);
     std::string out_dir(argv[1]);
 
 
 	int num_kept_states = 4;
-	if (argc >= 8) num_kept_states = atoi(argv[7]);
+	if (argc >= 7) num_kept_states = atoi(argv[6]);
 
 
 	OpSum ops;
@@ -147,17 +146,14 @@ int main(int argc, char** argv) try {
 	//// PERFORMING THE DIAGONALISATION (Lanczos)
 	///
 	auto block = Spinhalf(12);
-//	std::vector<string> statev = {"Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn"};
-//	auto init_state = product(block, statev);
-	auto lanczos_res = eigs_lanczos(ops, block, 
-//			init_state, 
-			lanczos_dim,
-			/* precision */ 1e-14,
-			/* max iter */ 10000,
-			/* force complex */ false
-			);
-	cerr << "iter criterion -> "<< lanczos_res.criterion << endl;
 
+
+    auto H = matrix(ops, block);
+    arma::vec eigval;
+	arma::mat eigvecs;
+    arma::eig_sym(eigval, eigvecs, H);
+
+	auto U = eigvecs.cols(0,num_kept_states);
 
 	//////////////////////////////////////////
 	//// OUTPUT
@@ -166,16 +162,11 @@ int main(int argc, char** argv) try {
 	json out;
 	out["lattice"] = {};
 
-	out["energies"] = lanczos_res.eigenvalues;
+	out["energies"] = eigval;
 
-	std::cout<<"Energy values:\n"<<lanczos_res.eigenvalues<<std::endl;
+	std::cout<<"Energy values:\n"<<eigval<<std::endl;
 
 
-
-	std::vector<State> gs_set;
-	for (int i=0; i<num_kept_states; i++){
-		gs_set.push_back(lanczos_res.eigenvectors.col(i));
-	}
 
 //	evaluate_exp_Sz(gs_set, out);
 //	evaluate_ring_flip(gs_set, out);
@@ -183,8 +174,8 @@ int main(int argc, char** argv) try {
     out["re_ringflip"] = {};
     for (int mu=0; mu<4; mu++){
         OpSum O({Op("hexa", ring_flip(), ring_members[mu])});
-        auto res = evaluate_gs_matrix(O, gs_set);  
-
+		auto O_mat = matrix(O, block);
+		arma::mat res =  U.t() * O_mat * U;
         out["re_ringflip"][mu] = res;
         std::cout <<"SL " <<mu <<"ringflip\n" << res;
     }

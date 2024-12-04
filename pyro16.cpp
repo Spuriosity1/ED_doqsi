@@ -54,8 +54,8 @@ inline vector<ivec3> calc_pyro_sites(){
 
 int spin_idx(const ivec3& R_){
 	auto R = wrap(R_);
-	for (int i=0; i<pyro_sites.size(); i++){
-		if (arma::all(R == pyro_sites[i])) {return i;}
+	for (int i=0; i<pyro16_sites.size(); i++){
+		if (arma::all(R == pyro16_sites[i])) {return i;}
 	}
 	throw logic_error("Indexed illegal site");
 }
@@ -182,7 +182,7 @@ void evaluate_exp_Sz(const std::vector<State>& gs_set, json& out){
 	
 	std::vector<arma::mat> Sz_list;
 	for (int J=0; J<16; J++){
-		auto R1=pyro_sites[J];
+		auto R1=pyro16_sites[J];
 
         OpSum Sz({Op("SZ", 1, J)});
 
@@ -191,7 +191,7 @@ void evaluate_exp_Sz(const std::vector<State>& gs_set, json& out){
 		std::cout << "Spin "<<J<<"<g|Sz|g> = \n"<<sz_mat<<"\n";
 	}
 	out["Sz"] = Sz_list;
-	out["lattice"]["spin_sites"] = pyro_sites;
+	out["lattice"]["spin_sites"] = pyro16_sites;
 
 
 }

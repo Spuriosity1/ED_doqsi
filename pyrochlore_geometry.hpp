@@ -62,7 +62,7 @@ const ivec3 plaqt[4][6] = {
 };
 
 
-const static std::vector<ivec3> pyro_sites = {
+const static std::vector<ivec3> pyro16_sites = {
 {1,1,1},
 {1,7,7},
 {7,1,7},
