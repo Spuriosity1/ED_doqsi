@@ -240,8 +240,6 @@ int main(int argc, char** argv) try {
 		ringflip_mats.push_back(U.t() * matrix(symmetrised_hexas_1, block) * U);
 		ringflip_mats.push_back(U.t() * matrix(symmetrised_hexas_2, block) * U);
 		ringflip_mats.push_back(U.t() * matrix(symmetrised_hexas_3, block) * U);
-
-
 		
 		spec_list.push_back(eigval);
 		ringflip_list.push_back(ringflip_mats);
@@ -272,6 +270,6 @@ int main(int argc, char** argv) try {
 
 	std::ofstream file("output/out_pyro16_full_"+label.str()+".json");
     file << out;
-} catch (Error e) {
+} catch (Error& e) {
 	error_trace(e);
 }
