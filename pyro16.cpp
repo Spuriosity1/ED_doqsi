@@ -32,26 +32,6 @@ static const arma::cx_mat sigma_y(arma::mat("0 0; 0 0"), arma::mat("0 -1; 1 0"))
 static const arma::mat sigma_z("1 0; 0 -1");
 
 
-
-ivec3 wrap(const ivec3& x){
-	ivec3 y(x);
-	y[0] = (y[0]%8 + 8)%8;
-	y[1] = (y[1]%8 + 8)%8;
-	y[2] = (y[2]%8 + 8)%8;
-	return y;
-}
-
-inline vector<ivec3> calc_pyro_sites(){
-	vector<ivec3> x;
-	for (int fcc=0; fcc<4; fcc++){
-		for (int pyro=0; pyro<4; pyro++){
-			x.push_back(wrap(FCC_pos[fcc] + pyro_pos[pyro] ));
-		}
-	}
-	return x;
-}
-
-
 int spin_idx(const ivec3& R_){
 	auto R = wrap(R_);
 	for (int i=0; i<pyro16_sites.size(); i++){
