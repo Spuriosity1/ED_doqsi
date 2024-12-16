@@ -26,6 +26,9 @@ add_executable(rationalmath tests/rationalmath.cpp)
 add_executable(pyro16 pyro16.cpp)
 target_link_libraries(pyro16 PRIVATE xdiag::xdiag)
 
+add_executable(pyro32 pyro32.cpp)
+target_link_libraries(pyro32 PRIVATE xdiag::xdiag)
+
 add_executable(cluster12 cluster12.cpp)
 target_link_libraries(cluster12 PRIVATE xdiag::xdiag)
 

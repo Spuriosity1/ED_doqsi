@@ -221,7 +221,7 @@ void evaluate_exp_Sz(const std::vector<State>& gs_set, json& out){
 	
 	std::vector<arma::mat> Sz_list;
 	for (int J=0; J<16; J++){
-		auto R1=pyro16_sites[J];
+		auto R1=pyro32_sites[J];
 
         OpSum Sz({Op("SZ", 1, J)});
 
@@ -230,7 +230,7 @@ void evaluate_exp_Sz(const std::vector<State>& gs_set, json& out){
 		std::cout << "Spin "<<J<<"<g|Sz|g> = \n"<<sz_mat<<"\n";
 	}
 	out["Sz"] = Sz_list;
-	out["lattice"]["spin_sites"] = pyro16_sites;
+	out["lattice"]["spin_sites"] = pyro32_sites;
 
 
 }
@@ -394,8 +394,8 @@ int main(int argc, char** argv) try {
     //
 	//
     //
-	std::ofstream file("output/out_pyro16_"+label.str()+".json");
+	std::ofstream file("output/out_pyro32_"+label.str()+".json");
     file << out;
-} catch (Error e) {
+} catch (Error& e) {
 	error_trace(e);
 }

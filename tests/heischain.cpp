@@ -18,6 +18,6 @@ int main() try {
 	double e0 = eigval0(ops, block); // compute ground state energy
 
 	Log("Ground state energy: {:.12f}", e0);
-} catch (Error e) {
+} catch (Error& e) {
 	error_trace(e);
 }

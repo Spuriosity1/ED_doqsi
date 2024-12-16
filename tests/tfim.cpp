@@ -87,6 +87,6 @@ int main(int argc, char** argv) try {
 		eigvals.push_back(lanczos_res.eigenvalues);
 	}
 
-} catch (Error e) {
+} catch (Error& e) {
 	error_trace(e);
 }

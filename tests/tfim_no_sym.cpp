@@ -64,6 +64,6 @@ int main(int argc, char** argv) try {
 	}
 	
 
-} catch (Error e) {
+} catch (Error& e) {
 	error_trace(e);
 }
