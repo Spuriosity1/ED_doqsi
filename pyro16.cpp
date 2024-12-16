@@ -26,15 +26,17 @@ std::string getISOCurrentTimestamp()
 	return std::string(buf);
 }
 
-// the Paulis
-static const arma::mat sigma_x("0 1; 1 0");
-static const arma::cx_mat sigma_y(arma::mat("0 0; 0 0"), arma::mat("0 -1; 1 0"));
-static const arma::mat sigma_z("1 0; 0 -1");
-
+ivec3 wrap(const ivec3& x){
+	ivec3 y(x);
+	y[0] = (y[0]%8 + 8)%8;
+	y[1] = (y[1]%8 + 8)%8;
+	y[2] = (y[2]%8 + 8)%8;
+	return y;
+}
 
 int spin_idx(const ivec3& R_){
 	auto R = wrap(R_);
-	for (int i=0; i<pyro16_sites.size(); i++){
+	for (int i=0; i<static_cast<int>(pyro16_sites.size()); i++){
 		if (arma::all(R == pyro16_sites[i])) {return i;}
 	}
 	throw logic_error("Indexed illegal site");
@@ -119,7 +121,7 @@ vector<std::pair<ivec3, Op>> get_hexa_list(){
 
 arma::mat evaluate_gs_matrix(const OpSum& O, const std::vector<State>& gs_set){
 	arma::mat out(gs_set.size(), gs_set.size());	
-	for (int i=0; i<gs_set.size(); i++){
+	for (int i=0; i<static_cast<int>(gs_set.size()); i++){
 		// the diagonal
 		out(i,i) = inner(O, gs_set[i]);
 		for (int j=0; j< i; j++){
@@ -136,7 +138,7 @@ arma::mat evaluate_gs_matrix(const OpSum& O, const std::vector<State>& gs_set){
 
 arma::cx_mat evaluate_gs_matrixC(const OpSum& O, const std::vector<State>& gs_set){
 	arma::cx_mat out(gs_set.size(), gs_set.size());	
-	for (int i=0; i<gs_set.size(); i++){
+	for (int i=0; i<static_cast<int>(gs_set.size()); i++){
 		// the diagonal
 		out(i,i) = innerC(O, gs_set[i]);
 		for (int j=0; j< i; j++){

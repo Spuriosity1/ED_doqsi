@@ -69,7 +69,7 @@ static const std::vector<std::pair<long, long>> bond_list = {
 
 arma::mat evaluate_gs_matrix(const OpSum& O, const std::vector<State>& gs_set){
 	arma::mat out(gs_set.size(), gs_set.size());	
-	for (int i=0; i<gs_set.size(); i++){
+	for (int i=0; i<static_cast<int>(gs_set.size()); i++){
 		// the diagonal
 		out(i,i) = inner(O, gs_set[i]);
 		for (int j=0; j< i; j++){

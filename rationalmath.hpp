@@ -164,19 +164,20 @@ inline void rlinsolve(rvec3& x, const rmat33& A, const rvec3& b){
 
 }
 
-Rational mod1(const Rational& x){
+inline Rational mod1(const Rational& x_){
 	// returns x with the numerator wrapped to [0, denominator)
+	Rational x(x_);
 	x.simplify();
 	if (x.denom < 0){
 		x.num *= -1;
 		x.denom *= -1;
 	}
-	auto res = x.num % x.denom;
-	if (res < 0) { res += x.denom; }
-	return Rational(res, x.denom);	
+	x.num %= x.denom;
+	if (x.num < 0) { x.num += x.denom; }
+	return x;
 }
 
-rvec3 mod1(const rvec3& v){
+inline rvec3 mod1(const rvec3& v){
 	rvec3 u;
 	for (int i=0; i<3; i++){
 		u[i] = mod1(v[i]);

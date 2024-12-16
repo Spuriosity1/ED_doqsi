@@ -1,5 +1,6 @@
 #include <cmath>
 #include <chrono>
+#include <cstring>
 #include <cstdint>
 #include <iostream>
 #include <nlohmann/json_fwd.hpp>
@@ -9,6 +10,7 @@
 #include <xdiag/all.hpp>
 #include <nlohmann/json.hpp>
 #include <sstream>
+#include <xdiag/symmetries/generated_group.hpp>
 #include "pyrochlore_geometry.hpp"
 #include "rationalmath.hpp"
 
@@ -50,23 +52,17 @@ std::string getISOCurrentTimestamp()
 static const rmat33 A = rmat33::from_cols({0,8,8},{8,0,8},{8,8,0});
 
 ivec3 wrap(const ivec3& x){
-	rvec3 rational_x(x);
+	rvec3 rational_x = {x[0], x[1], x[2]};
 	rvec3 n;
 	rlinsolve(n, A, rational_x);
 	// A * n = rational_x
-	ivec3 wrapped_x = as_integer(A*mod1(n));
-
-	ivec3 y(x);
-	y[0] = (y[0]%8 + 8)%8;
-	y[1] = (y[1]%8 + 8)%8;
-	y[2] = (y[2]%8 + 8)%8;
-	return y;
+	return as_integer(A*mod1(n));
 }
 
 int spin_idx(const ivec3& R_){
 	auto R = wrap(R_);
-	for (int i=0; i<pyro16_sites.size(); i++){
-		if (arma::all(R == pyro16_sites[i])) {return i;}
+	for (int i=0; i<pyro32_sites.size(); i++){
+		if (arma::all(R == pyro32_sites[i])) {return i;}
 	}
 	throw logic_error("Indexed illegal site");
 }
@@ -127,59 +123,53 @@ inline arma::mat ring_flip(){
 
 }
 
-std::vector<std::vector<int>> plaq_indices =
-{{10, 26, 20, 12, 25, 17},
- {4, 20, 26, 2, 16, 24},
- {24, 8, 1, 25, 12, 4},
- {17, 1, 8, 16, 2, 10},
- {14, 30, 16, 8, 29, 21},
- {0, 16, 30, 6, 20, 28},
- {28, 12, 5, 29, 8, 0},
- {21, 5, 12, 20, 6, 14},
- {8, 24, 22, 14, 27, 19},
- {6, 22, 24, 0, 18, 26},
- {26, 10, 3, 27, 14, 6},
- {19, 3, 10, 18, 0, 8},
- {12, 28, 18, 10, 31, 23},
- {2, 18, 28, 4, 22, 30},
- {30, 14, 7, 31, 10, 2},
- {23, 7, 14, 22, 4, 12},
- {11, 27, 21, 13, 24, 16},
- {5, 21, 27, 3, 17, 25},
- {25, 9, 0, 24, 13, 5},
- {16, 0, 9, 17, 3, 11},
- {15, 31, 17, 9, 28, 20},
- {1, 17, 31, 7, 21, 29},
- {29, 13, 4, 28, 9, 1},
- {20, 4, 13, 21, 7, 15},
- {9, 25, 23, 15, 26, 18},
- {7, 23, 25, 1, 19, 27},
- {27, 11, 2, 26, 15, 7},
- {18, 2, 11, 19, 1, 9},
- {13, 29, 19, 11, 30, 22},
- {3, 19, 29, 5, 23, 31},
- {31, 15, 6, 30, 11, 3},
- {22, 6, 15, 23, 5, 13}}
+std::vector<std::vector<int64_t>> plaq_indices = {
+	{10, 26, 20, 12, 25, 17},
+	{4, 20, 26, 2, 16, 24},
+	{24, 8, 1, 25, 12, 4},
+	{17, 1, 8, 16, 2, 10},
+	{14, 30, 16, 8, 29, 21},
+	{0, 16, 30, 6, 20, 28},
+	{28, 12, 5, 29, 8, 0},
+	{21, 5, 12, 20, 6, 14},
+	{8, 24, 22, 14, 27, 19},
+	{6, 22, 24, 0, 18, 26},
+	{26, 10, 3, 27, 14, 6},
+	{19, 3, 10, 18, 0, 8},
+	{12, 28, 18, 10, 31, 23},
+	{2, 18, 28, 4, 22, 30},
+	{30, 14, 7, 31, 10, 2},
+	{23, 7, 14, 22, 4, 12},
+	{11, 27, 21, 13, 24, 16},
+	{5, 21, 27, 3, 17, 25},
+	{25, 9, 0, 24, 13, 5},
+	{16, 0, 9, 17, 3, 11},
+	{15, 31, 17, 9, 28, 20},
+	{1, 17, 31, 7, 21, 29},
+	{29, 13, 4, 28, 9, 1},
+	{20, 4, 13, 21, 7, 15},
+	{9, 25, 23, 15, 26, 18},
+	{7, 23, 25, 1, 19, 27},
+	{27, 11, 2, 26, 15, 7},
+	{18, 2, 11, 19, 1, 9},
+	{13, 29, 19, 11, 30, 22},
+	{3, 19, 29, 5, 23, 31},
+	{31, 15, 6, 30, 11, 3},
+	{22, 6, 15, 23, 5, 13}};
 
 vector<std::pair<ivec3, Op>> get_hexa_list(){
 	auto ring = ring_flip();
 	vector<std::pair<ivec3, Op>> retval;
-	for (cont auto& rf : plaq_indices){
+	for (const auto& hex_ind : plaq_indices){
 
-
-
-	for (const auto& R_dfcc : dual_FCC_pos){
-		for (int psl=0;psl<4;psl++){
-
-			auto R = R_dfcc + pyro_pos[psl];
-			vector<int64_t> hex_ind;
-			for (int j=0; j<6; j++){
-				hex_ind.push_back(spin_idx(R+plaqt[psl][j]));
-			}
-			auto plaq = Op("hexa", ring, hex_ind);
-
-			retval.push_back(std::make_pair(R, plaq));
+		ivec3 R = {0,0,0};
+		for (int mu=0; mu<6; mu++){
+			R += pyro32_sites[hex_ind[mu]];
 		}
+		R /= 6;
+		auto plaq = Op("hexa", ring, hex_ind);
+
+		retval.push_back(std::make_pair(R, plaq));
 	}
 
 	return retval;
@@ -188,7 +178,7 @@ vector<std::pair<ivec3, Op>> get_hexa_list(){
 
 arma::mat evaluate_gs_matrix(const OpSum& O, const std::vector<State>& gs_set){
 	arma::mat out(gs_set.size(), gs_set.size());	
-	for (int i=0; i<gs_set.size(); i++){
+	for (int i=0; i<static_cast<int>(gs_set.size()); i++){
 		// the diagonal
 		out(i,i) = inner(O, gs_set[i]);
 		for (int j=0; j< i; j++){
@@ -205,7 +195,7 @@ arma::mat evaluate_gs_matrix(const OpSum& O, const std::vector<State>& gs_set){
 
 arma::cx_mat evaluate_gs_matrixC(const OpSum& O, const std::vector<State>& gs_set){
 	arma::cx_mat out(gs_set.size(), gs_set.size());	
-	for (int i=0; i<gs_set.size(); i++){
+	for (int i=0; i<static_cast<int>(gs_set.size()); i++){
 		// the diagonal
 		out(i,i) = innerC(O, gs_set[i]);
 		for (int j=0; j< i; j++){
@@ -274,9 +264,40 @@ void evaluate_ring_flip(const std::vector<State>& gs_set, json& out){
 }
 
 
+
+std::vector<int> get_translation_symetries(const ivec3& dx) {
+	std::vector<int> res(16);
+	
+	for (const auto& R_fcc : FCC_pos){
+		for (int mu=0; mu<4; mu++){
+			auto R1 = R_fcc + pyro_pos[mu];
+			auto J1 = spin_idx(R1);
+			res[J1] = spin_idx(R1 + dx);
+		}
+	}
+	return res;
+}
+
+void parse_irrep(std::vector<xdiag::complex> characters, const char* choice){
+	assert(strlen(choice) == 3);
+	characters.resize(3);
+	for (int i=0; i<3; i++){
+		switch (choice[i]){
+			case 'p': // short for "pi"
+				characters[i] = -1;
+				break;
+			case '0':
+				characters[i] = 1;
+				break;
+			default:
+				throw new std::runtime_error("Bad character choice - must be exactly three characters, either 0 (k=0, character=1) or pi (k=pi, character=-1)");
+		}
+	}
+}
+
 int main(int argc, char** argv) try {
-	if (argc < 6){
-		cout <<"USAGE: "<<argv[0]<<" <Jpm/Jzz> <hx> <hy> <hz> <lanczos_dim> [num_kept_states = 4]\n";
+	if (argc < 7){
+		cout <<"USAGE: "<<argv[0]<<" <Jpm/Jzz> <hx> <hy> <hz> <lanczos_dim> <irrep> [num_kept_states = 4]\n";
 		return 1;
 	}
 
@@ -284,9 +305,11 @@ int main(int argc, char** argv) try {
 					 //
 	int lanczos_dim = atoi(argv[5]);
 
+	std::vector<xdiag::complex> characters;
+	parse_irrep(characters, argv[6]);
 
 	int num_kept_states = 4;
-	if (argc >= 7) num_kept_states = atoi(argv[6]);
+	if (argc >= 8) num_kept_states = atoi(argv[7]);
 
 
 	OpSum ops;
@@ -313,9 +336,23 @@ int main(int argc, char** argv) try {
     std::stringstream label;
     label << "%jpm=" << ops["Jpm"] << "%B=" << B[0]<<","<<B[1]<<","<<B[2];
 	/////////////////////////////////////////////
+	///  APPLYING SYMMETRIES
+	
+
+
+	std::vector<int> T1 = get_translation_symetries({4,4,0});
+	std::vector<int> T2 = get_translation_symetries({0,4,4});
+	std::vector<int> T3 = get_translation_symetries({4,0,4});
+	Permutation p1 (T1);
+	Permutation p2 (T2);
+	Permutation p3 (T3);
+	auto g = generated_group({p1, p2, p3});
+
+	/////////////////////////////////////////////
 	//// PERFORMING THE DIAGONALISATION (Lanczos)
 	///
-	auto block = Spinhalf(16);
+	auto irrep = generated_irrep({p1,p2,p3}, characters);
+	auto block = Spinhalf(32, g, irrep);
 	std::vector<string> statev = {"Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn","Up","Dn"};
 	auto init_state = product(block, statev);
 	auto lanczos_res = eigs_lanczos(ops, block, 
