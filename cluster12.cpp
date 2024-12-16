@@ -199,6 +199,6 @@ int main(int argc, char** argv) try {
     //
 	std::ofstream file(out_dir + "/out_cluster12_"+label.str()+".json");
     file << out;
-} catch (Error e) {
+} catch (Error& e) {
 	error_trace(e);
 }

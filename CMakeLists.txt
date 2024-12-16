@@ -8,7 +8,7 @@ project(
 
 find_package(xdiag REQUIRED)
 
-set(CMAKE_CXX_FLAGS "-Wall -Wpedantic -DDEBUG -g")
+set(CMAKE_CXX_FLAGS "-Wall -Wpedantic -DNDEBUG")
 
 # the tests
 add_executable(tfim tests/tfim.cpp)
