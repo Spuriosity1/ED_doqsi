@@ -61,7 +61,7 @@ ivec3 wrap(const ivec3& x){
 
 int spin_idx(const ivec3& R_){
 	auto R = wrap(R_);
-	for (int i=0; i<pyro32_sites.size(); i++){
+	for (int i=0; i<static_cast<int>(pyro32_sites.size()); i++){
 		if (arma::all(R == pyro32_sites[i])) {return i;}
 	}
 	throw logic_error("Indexed illegal site");
@@ -73,40 +73,130 @@ const char* field_proj_label[4] = {"h0", "h1", "h2", "h3"};
 
 const ivec3 B_diamond={2,2,2};
 
-void add_tetras(OpSum& ops, int sl){
-	assert(sl*sl == 1);
 
-	for (const auto& R_fcc : FCC_pos){
-		for (int mu=0; mu<4; mu++){
-			auto R1 = R_fcc + (1-sl)/2 * B_diamond + sl*pyro_pos[mu];
-			auto J1 = spin_idx(R1);
+const static vector<std::pair<int,int>> pyro32_nn_bonds = {
+{ 0, 8 },
+{ 0, 16 },
+{ 0, 24 },
+{ 1, 9 },
+{ 1, 17 },
+{ 1, 25 },
+{ 2, 10 },
+{ 2, 18 },
+{ 2, 26 },
+{ 3, 11 },
+{ 3, 19 },
+{ 3, 27 },
+{ 4, 12 },
+{ 4, 20 },
+{ 4, 28 },
+{ 5, 13 },
+{ 5, 21 },
+{ 5, 29 },
+{ 6, 14 },
+{ 6, 22 },
+{ 6, 30 },
+{ 7, 15 },
+{ 7, 23 },
+{ 7, 31 },
+{ 8, 1 },
+{ 8, 16 },
+{ 8, 19 },
+{ 9, 0 },
+{ 9, 17 },
+{ 9, 18 },
+{ 10, 3 },
+{ 10, 18 },
+{ 10, 17 },
+{ 11, 2 },
+{ 11, 19 },
+{ 11, 16 },
+{ 12, 5 },
+{ 12, 20 },
+{ 12, 23 },
+{ 13, 4 },
+{ 13, 21 },
+{ 13, 22 },
+{ 14, 7 },
+{ 14, 22 },
+{ 14, 21 },
+{ 15, 6 },
+{ 15, 23 },
+{ 15, 20 },
+{ 16, 2 },
+{ 16, 24 },
+{ 16, 30 },
+{ 17, 3 },
+{ 17, 25 },
+{ 17, 31 },
+{ 18, 0 },
+{ 18, 26 },
+{ 18, 28 },
+{ 19, 1 },
+{ 19, 27 },
+{ 19, 29 },
+{ 20, 6 },
+{ 20, 28 },
+{ 20, 26 },
+{ 21, 7 },
+{ 21, 29 },
+{ 21, 27 },
+{ 22, 4 },
+{ 22, 30 },
+{ 22, 24 },
+{ 23, 5 },
+{ 23, 31 },
+{ 23, 25 },
+{ 24, 4 },
+{ 24, 8 },
+{ 24, 13 },
+{ 25, 5 },
+{ 25, 9 },
+{ 25, 12 },
+{ 26, 6 },
+{ 26, 10 },
+{ 26, 15 },
+{ 27, 7 },
+{ 27, 11 },
+{ 27, 14 },
+{ 28, 0 },
+{ 28, 12 },
+{ 28, 9 },
+{ 29, 1 },
+{ 29, 13 },
+{ 29, 8 },
+{ 30, 2 },
+{ 30, 14 },
+{ 30, 11 },
+{ 31, 3 },
+{ 31, 15 },
+{ 31, 10 }
+};
 
-			for (int nu = (mu+1); nu<4; nu++){
-				auto R2 = R_fcc + (1-sl)/2 * B_diamond + sl*pyro_pos[nu];
 
-				auto J2 = spin_idx(R2);
-				/*
-				printf("ISING %+1lld %+1lld %+1lld (idx %d) --  %+1lld %+1lld %+1lld (idx %d)\n", 
-						R1[0],R1[1],R1[2], J1, 
-						R2[0],R2[1],R2[2], J2);
+void add_tetras(OpSum& ops){
+	for (const auto& [J1, J2] : pyro32_nn_bonds){
+		/*
+		   printf("ISING %+1lld %+1lld %+1lld (idx %d) --  %+1lld %+1lld %+1lld (idx %d)\n", 
+		   R1[0],R1[1],R1[2], J1, 
+		   R2[0],R2[1],R2[2], J2);
 
-						*/
-
-				ops += Op("EXCHANGE", "Jpm", {J1, J2});
-				ops += Op("ISING", "Jzz", {J1, J2});
-			}
-		}
+		*/
+		ops += Op("EXCHANGE", "Jpm", {J1, J2});
+		ops += Op("ISING", "Jzz", {J1, J2});
 	}
 }
 
+
+
 void add_magnetic_field(OpSum& ops){
-	for (const auto& R_fcc : FCC_pos){
-		for (int mu=0; mu<4; mu++){
-			auto R1 = R_fcc + pyro_pos[mu];
-			auto J1 = spin_idx(R1);
-		  	ops += Op("S+", field_proj_label[mu], J1);
-		  	ops += Op("S-", field_proj_label[mu], J1);
-		}
+	int mu=0;
+	for (const auto& R1 : pyro32_sites){
+		auto J1 = spin_idx(R1);
+		ops += Op("S+", field_proj_label[mu], J1);
+		ops += Op("S-", field_proj_label[mu], J1);
+		mu = (mu +1 )%4;
+		
 	}
 }
 
@@ -266,19 +356,16 @@ void evaluate_ring_flip(const std::vector<State>& gs_set, json& out){
 
 
 std::vector<int> get_translation_symetries(const ivec3& dx) {
-	std::vector<int> res(16);
+	std::vector<int> res(32);
 	
-	for (const auto& R_fcc : FCC_pos){
-		for (int mu=0; mu<4; mu++){
-			auto R1 = R_fcc + pyro_pos[mu];
-			auto J1 = spin_idx(R1);
-			res[J1] = spin_idx(R1 + dx);
-		}
+	for (const auto& R1 : pyro32_sites){
+		auto J1 = spin_idx(R1);
+		res[J1] = spin_idx(R1 + dx);
 	}
 	return res;
 }
 
-void parse_irrep(std::vector<xdiag::complex> characters, const char* choice){
+void parse_irrep(std::vector<xdiag::complex>& characters, const char* choice){
 	assert(strlen(choice) == 3);
 	characters.resize(3);
 	for (int i=0; i<3; i++){
@@ -319,8 +406,8 @@ int main(int argc, char** argv) try {
 	///
 	// defined types: HB, S+, S-, Sz, EXCHANGE
 	// TODO S+S+ S-S-
-	add_tetras(ops, 1);
-	add_tetras(ops, -1);
+	add_tetras(ops);
+	
 	add_magnetic_field(ops);
 	
 	ops["Jzz"] = 1.;

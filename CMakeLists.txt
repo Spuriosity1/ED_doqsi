@@ -8,7 +8,18 @@ project(
 
 find_package(xdiag REQUIRED)
 
-set(CMAKE_CXX_FLAGS "-Wall -Wpedantic -DNDEBUG")
+
+set(CMAKE\_BUILD\_TYPE Debug)
+if(NOT ${CMAKE\_BUILD\_TYPE} STREQUAL "Debug" OR NOT ${CMAKE\_BUILD\_TYPE} STREQUAL "Release")
+set(CMAKE\_BUILD\_TYPE Debug CACHE STRING "Choose the type of build." FORCE)
+endif()
+
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    set(CMAKE_CXX_FLAGS "-DNDEBUG")
+else()
+    set(CMAKE_CXX_FLAGS "-Wall -Wpedantic -g -O0")
+endif()
+    
 
 # the tests
 add_executable(tfim tests/tfim.cpp)
