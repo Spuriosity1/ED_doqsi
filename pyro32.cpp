@@ -6,6 +6,7 @@
 #include <nlohmann/json_fwd.hpp>
 #include <ostream>
 #include <stdexcept>
+#include <tuple>
 #include <utility>
 #include <xdiag/all.hpp>
 #include <nlohmann/json.hpp>
@@ -202,15 +203,19 @@ void add_magnetic_field(OpSum& ops){
 
 
 // returns a 64x64 matrix representing S+S-S+S-S+S-
-inline arma::mat ring_flip(){
-	// This can be done efficiently
-	// This implementation is not that, it's pure horror
+inline arma::mat re_ring_flip(){
 	arma::mat O = arma::zeros(64, 64);
-    O(0b101010, 0b010101) = 1;
-    //O(0b010101, 0b101010) = 1;
+    O(0b101010, 0b010101) = 0.5;
+    O(0b010101, 0b101010) = 0.5;
 	return O;
+}
 
 
+inline arma::mat im_ring_flip(){
+	arma::mat O = arma::zeros(64, 64);
+    O(0b101010, 0b010101) = 0.5;
+    O(0b010101, 0b101010) = -0.5;
+	return O;
 }
 
 std::vector<std::vector<int64_t>> plaq_indices = {
@@ -247,9 +252,10 @@ std::vector<std::vector<int64_t>> plaq_indices = {
 	{31, 15, 6, 30, 11, 3},
 	{22, 6, 15, 23, 5, 13}};
 
-vector<std::pair<ivec3, Op>> get_hexa_list(){
-	auto ring = ring_flip();
-	vector<std::pair<ivec3, Op>> retval;
+inline vector<std::tuple<ivec3, OpSum, OpSum>> get_hexa_list(){
+	auto re_ring = re_ring_flip();
+	auto im_ring = im_ring_flip();
+	vector<std::tuple<ivec3, OpSum, OpSum>> retval;
 	for (const auto& hex_ind : plaq_indices){
 
 		ivec3 R = {0,0,0};
@@ -257,9 +263,10 @@ vector<std::pair<ivec3, Op>> get_hexa_list(){
 			R += pyro32_sites[hex_ind[mu]];
 		}
 		R /= 6;
-		auto plaq = Op("hexa", ring, hex_ind);
+		auto re_plaq = OpSum({Op("hexa", re_ring, hex_ind)});
+		auto im_plaq = OpSum({Op("hexa", re_ring, hex_ind)});
 
-		retval.push_back(std::make_pair(R, plaq));
+		retval.push_back(std::make_tuple(R, re_plaq,im_plaq));
 	}
 
 	return retval;
@@ -283,15 +290,15 @@ arma::mat evaluate_gs_matrix(const OpSum& O, const std::vector<State>& gs_set){
 }
 
 
-arma::cx_mat evaluate_gs_matrixC(const OpSum& O, const std::vector<State>& gs_set){
-	arma::cx_mat out(gs_set.size(), gs_set.size());	
+arma::mat evaluate_gs_matrixC(const OpSum& O, const std::vector<State>& gs_set){
+	arma::mat out(gs_set.size(), gs_set.size());	
 	for (int i=0; i<static_cast<int>(gs_set.size()); i++){
 		// the diagonal
-		out(i,i) = innerC(O, gs_set[i]);
+		out(i,i) = inner(O, gs_set[i]);
 		for (int j=0; j< i; j++){
 			auto w = gs_set[j];
 			apply(O, gs_set[j], w);
-			xdiag::complex val = dotC(gs_set[i], w);
+			double val = dot(gs_set[i], w);
 			out(i,j) = val;
 			out(j,i) = val;
 		}
@@ -336,14 +343,15 @@ void evaluate_ring_flip(const std::vector<State>& gs_set, json& out){
 	std::vector<arma::mat> im_ringflip;
 	std::vector<ivec3> plaq_sites;
 
-	for (auto& [R1, op] : hexa_list){
-		arma::cx_mat exp_O = evaluate_gs_matrixC(OpSum({op}), gs_set);
+	for (auto& [R1, re_op, im_op] : hexa_list){	
+		auto re_exp_O = evaluate_gs_matrixC(re_op, gs_set);
+		auto im_exp_O = evaluate_gs_matrixC(im_op, gs_set);
 	
 		printf("%d\t%+1lld\t%+1lld\t%+1lld\n", 
 				sl, R1[0],R1[1],R1[2]);
-		std::cout << exp_O << "\n";
-		re_ringflip.push_back(real(exp_O));
-		im_ringflip.push_back(imag(exp_O));
+		std::cout << re_op << "\n";
+		re_ringflip.push_back(real(re_exp_O));
+		im_ringflip.push_back(imag(im_exp_O));
 		plaq_sites.push_back(R1);
 		sl = (sl + 1)%4;
 	}
